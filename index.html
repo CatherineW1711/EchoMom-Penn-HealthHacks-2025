@@ -640,64 +640,279 @@
         const projects = {
             echomom: {
                 title: "EchoMom: AI-Powered Postpartum Depression Screening",
-                subtitle: "Product Strategy Lead | SMB Healthcare GTM Strategy",
-                content: `
-                    <div style="background:linear-gradient(120deg, #2C3E50, #34495E);color:white;padding:40px;border-radius:10px;margin-bottom:30px;">
-                        <h2 style="margin-bottom:15px;">Transforming Maternal Healthcare for SMB Providers</h2>
-                        <p>EchoMom is an AI-powered voice analysis tool that provides scalable, private, and cost-effective PPD screening solutions for small and medium healthcare practices.</p>
+    subtitle: "Product Strategy Lead | Penn HealthHacks+ 2025 Hackathon",
+    content: `
+        <div class="modal-section">
+            <h2 class="modal-section-title">1.0 Project Overview & Problem Definition</h2>
+            <div class="modal-content-card">
+                <p><strong>Project:</strong> EchoMom – An AI voice analysis tool designed to integrate with clinical workflows to screen for postpartum depression (PPD) during routine postnatal check-ups.</p>
+                <p><strong>Core Problem:</strong> Postpartum depression is a severe condition affecting approximately 1 in 8 women, yet over 50% of cases go undiagnosed. The standard screening method, the Edinburgh Postnatal Depression Scale (EPDS), suffers from low compliance due to time constraints during appointments, social stigma, and a lack of immediate clinical follow-up.</p>
+                
+                <div class="viz-container">
+                    <div class="viz-card">
+                        <div class="viz-number">1 in 8</div>
+                        <div class="viz-label">Women affected by PPD</div>
+                    </div>
+                    <div class="viz-card">
+                        <div class="viz-number">50%+</div>
+                        <div class="viz-label">Cases undiagnosed</div>
+                    </div>
+                    <div class="viz-card">
+                        <div class="viz-number">>50%</div>
+                        <div class="viz-label">Non-compliance with EPDS</div>
+                    </div>
+                </div>
+                
+                <p><strong>My Role:</strong> As Product Strategy Lead, I owned the end-to-end product strategy, market analysis, user research, and go-to-market planning for this healthcare solution.</p>
+            </div>
+        </div>
+
+        <div class="modal-section">
+            <h2 class="modal-section-title">2.0 Market Sizing & Opportunity Analysis</h2>
+            <div class="modal-content-card">
+                <p>I led the initial market analysis to quantify the opportunity and define our target segment.</p>
+                
+                <div class="viz-container">
+                    <div class="viz-card">
+                        <div class="viz-number">$2.8B</div>
+                        <div class="viz-label">U.S. Maternal Health Tech Market (TAM)</div>
+                    </div>
+                    <div class="viz-card">
+                        <div class="viz-number">11K</div>
+                        <div class="viz-label">OB/GYN Practices (SOM)</div>
+                    </div>
+                </div>
+                
+                <p><strong>Strategic Focus:</strong> Our analysis highlighted a significant disparity in PPD screening rates for women in underserved and low-income communities. We deliberately prioritized health equity, designing our go-to-market and product strategy to first address these populations that experience the greatest gap in care.</p>
+                
+                <div class="metric-grid">
+                    <div class="metric-item">
+                        <div class="metric-value">3.5x</div>
+                        <div class="metric-label">Higher PPD risk in low-income communities</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">40%</div>
+                        <div class="metric-label">Lower screening rates in rural areas</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-section">
+            <h2 class="modal-section-title">3.0 User & Stakeholder Discovery</h2>
+            <div class="modal-content-card">
+                <p>I identified and defined the needs of three core user groups to shape the product requirements.</p>
+                
+                <div class="two-column">
+                    <div class="user-card">
+                        <h3><i class="fas fa-user-injured"></i> Patients (New Mothers)</h3>
+                        <p><strong>Need:</strong> A private, low-stigma, and non-judgmental way to express their mental state. Desire for immediate reassurance and clear next steps.</p>
+                        <ul>
+                            <li>Fear of being judged as "unfit mothers"</li>
+                            <li>Lack of time during hectic postnatal period</li>
+                            <li>Need for immediate feedback and guidance</li>
+                        </ul>
                     </div>
                     
-                    <div class="viz-container">
-                        <div class="viz-card">
-                            <div class="viz-number">$2.8B</div>
-                            <div class="viz-label">Market Opportunity</div>
-                        </div>
-                        <div class="viz-card">
-                            <div class="viz-number">40%</div>
-                            <div class="viz-label">Cost Reduction</div>
-                        </div>
-                        <div class="viz-card">
-                            <div class="viz-number">25%</div>
-                            <div class="viz-label">Better Detection Rate</div>
-                        </div>
+                    <div class="user-card">
+                        <h3><i class="fas fa-user-md"></i> Providers (OB/GYNs & Nurses)</h3>
+                        <p><strong>Need:</strong> A tool that integrates seamlessly into existing, time-pressured workflows (<5 mins). Requires actionable results, not raw data.</p>
+                        <ul>
+                            <li>Average appointment time: 15-20 minutes</li>
+                            <li>Need for clear clinical decision support</li>
+                            <li>HIPAA compliance requirements</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="user-card">
+                    <h3><i class="fas fa-hospital"></i> Healthcare Systems (Payers & Administrators)</h3>
+                    <p><strong>Need:</strong> A solution that improves quality of care metrics, reduces long-term treatment costs through early detection, and ensures HIPAA compliance.</p>
+                    <ul>
+                        <li>Focus on value-based care metrics</li>
+                        <li>Reduction in long-term treatment costs</li>
+                        <li>Compliance with regulatory requirements</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-section">
+            <h2 class="modal-section-title">4.0 Solution & Product Definition</h2>
+            <div class="modal-content-card">
+                <p>The proposed solution was a HIPAA-compliant mobile/web application that uses a 90-second voice sample from the mother to analyze vocal biomarkers for PPD risk.</p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4><i class="fas fa-plug"></i> Seamless EHR Integration</h4>
+                        <p>Prioritized integration with major Electronic Health Record (EHR) systems like Epic and Cerner for one-click access and automatic logging of screening results.</p>
                     </div>
                     
-                    <h3 style="color:#2C3E50;margin:25px 0 15px;">The Challenge</h3>
-                    <p>Postpartum depression affects 1 in 8 women, yet remains vastly underdiagnosed, especially in resource-limited settings. Small healthcare practices struggle to provide adequate mental health support due to budget constraints, limited staff, and time limitations.</p>
-                    
-                    <h3 style="color:#2C3E50;margin:25px 0 15px;">My Role & Responsibilities</h3>
-                    <p>As Product Strategy Lead, I owned the end-to-end product strategy and go-to-market plan:</p>
-                    <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
-                        <li>Conducted market sizing and competitive analysis for the $2.8B maternal health tech segment</li>
-                        <li>Developed comprehensive GTM strategy targeting SMB healthcare providers</li>
-                        <li>Designed HIPAA-compliant product roadmap with EHR integration capabilities</li>
-                        <li>Built business case forecasting 40% cost reduction and 25% improvement in early detection</li>
-                        <li>Created sales enablement materials and ROI calculators for the sales team</li>
-                    </ul>
-                    
-                    <h3 style="color:#2C3E50;margin:25px 0 15px;">Key Strategies & Solutions</h3>
-                    <p><strong>SMB-Focused Approach:</strong> Unlike enterprise solutions, EchoMom was designed specifically for the needs and constraints of small practices:</p>
-                    <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
-                        <li>Pricing model based on patient volume rather than fixed enterprise fees</li>
-                        <li>Simplified implementation with minimal IT requirements</li>
-                        <li>Focus on seamless integration with existing practice workflows</li>
-                        <li>Educational content addressing specific SMB concerns about cost and implementation</li>
-                    </ul>
-                    
-                    <h3 style="color:#2C3E50;margin:25px 0 15px;">Results & Impact</h3>
-                    <p>The comprehensive strategy positioned EchoMom as the leading solution for SMB healthcare providers seeking to improve maternal mental health services:</p>
-                    <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
-                        <li>Clear path to reaching 1,800+ target clinics in the first year</li>
-                        <li>Projected 3.2x marketing ROI by Year 2 based on $40K average annual savings per practice</li>
-                        <li>Developed full suite of marketing materials including webinars, case studies, and ROI calculators</li>
-                        <li>Defined KPIs and measurement framework to track success across leads, conversion, and retention</li>
-                    </ul>
-                    
-                    <div style="background:#f8f9fa;padding:20px;border-radius:10px;margin:30px 0;">
-                        <h4 style="color:#2C3E50;margin-bottom:15px;">Product Manager Impact</h4>
-                        <p>This project demonstrates my ability to develop comprehensive product strategies for specialized markets, create data-driven business cases, and design go-to-market plans that address specific customer segment needs.</p>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-link"></i> Automated Referral Tracking</h4>
+                        <p>Designed to close the loop by providing a curated list of in-network mental health professionals and generating referral notes within the EHR.</p>
                     </div>
-                `
+                    
+                    <div class="feature-card">
+                        <h4><i class="fas fa-cloud"></i> Scalable Cloud Deployment</h4>
+                        <p>Advocated for AWS cloud architecture to ensure scalability, security, and rapid deployment across different healthcare networks.</p>
+                    </div>
+                </div>
+                
+                <div class="viz-container">
+                    <div class="viz-card">
+                        <div class="viz-number">90s</div>
+                        <div class="viz-label">Voice sample analysis time</div>
+                    </div>
+                    <div class="viz-card">
+                        <div class="viz-number">100%</div>
+                        <div class="viz-label">HIPAA Compliant</div>
+                    </div>
+                    <div class="viz-card">
+                        <div class="viz-number"><i class="fas fa-bolt"></i></div>
+                        <div class="viz-label">Real-time results</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-section">
+            <h2 class="modal-section-title">5.0 Go-to-Market Strategy</h2>
+            <div class="modal-content-card">
+                <p>I designed a GTM strategy targeting OB/GYN providers, recognizing them as the key adoption decision-makers.</p>
+                
+                <div class="two-column">
+                    <div>
+                        <h3><i class="fas fa-bullseye"></i> Channel Strategy</h3>
+                        <ul>
+                            <li>Direct sales to OB/GYN practices</li>
+                            <li>Partnerships with regional healthcare networks</li>
+                            <li>Pilot programs with academic medical centers</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3><i class="fas fa-rocket"></i> Pilot Program</h3>
+                        <ul>
+                            <li>6-month free pilot for influential medical centers</li>
+                            <li>Focus on generating clinical validation</li>
+                            <li>Development of case studies for broader rollout</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3><i class="fas fa-comments"></i> Messaging & Value Proposition</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4><i class="fas fa-clock"></i> Clinical Efficiency</h4>
+                        <p>"Save 5 minutes per patient" with streamlined screening process</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4><i class="fas fa-chart-line"></i> Improved Outcomes</h4>
+                        <p>"Increase your early detection rate" with AI-powered analysis</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4><i class="fas fa-heart"></i> Health Equity</h4>
+                        <p>Improve equitable access to mental health screening for all demographics</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-section">
+            <h2 class="modal-section-title">6.0 Success Metrics & Business Case</h2>
+            <div class="modal-content-card">
+                <p>I built a comprehensive business case to forecast impact and support strategic prioritization.</p>
+                
+                <div class="viz-container">
+                    <div class="viz-card">
+                        <div class="viz-number">25%</div>
+                        <div class="viz-label">Increase in early detection rates</div>
+                    </div>
+                    <div class="viz-card">
+                        <div class="viz-number">40%</div>
+                        <div class="viz-label">Reduction in per-screen costs</div>
+                    </div>
+                    <div class="viz-card">
+                        <div class="viz-number">3.2x</div>
+                        <div class="viz-label">Projected ROI by Year 2</div>
+                    </div>
+                </div>
+                
+                <h3><i class="fas fa-chart-bar"></i> Key Performance Indicators (KPIs)</h3>
+                <div class="metric-grid">
+                    <div class="metric-item">
+                        <div class="metric-value">>80%</div>
+                        <div class="metric-label">Eligible patients screened</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value"><24h</div>
+                        <div class="metric-label">Screening to referral time</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">>60%</div>
+                        <div class="metric-label">Provider adoption rate</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">95%</div>
+                        <div class="metric-label">User satisfaction score</div>
+                    </div>
+                </div>
+                
+                <h3><i class="fas fa-dollar-sign"></i> Cost-Benefit Analysis</h3>
+                <div class="two-column">
+                    <div>
+                        <h4>Cost Savings</h4>
+                        <ul>
+                            <li>40% reduction in manual screening costs</li>
+                            <li>Reduced administrative burden</li>
+                            <li>Lower long-term treatment costs through early detection</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4>Value Generated</h4>
+                        <ul>
+                            <li>Improved quality of care metrics</li>
+                            <li>Enhanced patient satisfaction</li>
+                            <li>Better health outcomes for mothers and babies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="conclusion">
+            <h2>7.0 Conclusion</h2>
+            <p>The EchoMom project involved defining a complex product strategy at the intersection of AI, healthcare, and equitable access. I led the effort to:</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4><i class="fas fa-chart-pie"></i> Market Analysis</h4>
+                    <p>Quantified a $2.8B market opportunity with focus on underserved populations</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h4><i class="fas fa-users"></i> User Research</h4>
+                    <p>Translated user pain points into a technical product roadmap</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h4><i class="fas fa-road"></i> GTM Strategy</h4>
+                    <p>Developed a pragmatic go-to-market plan for healthcare sales cycle</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h4><i class="fas fa-calculator"></i> Business Case</h4>
+                    <p>Built data-driven business case proving viability and impact</p>
+                </div>
+            </div>
+            
+            <p>This experience demonstrates my ability to operate in ambiguous, cross-functional environments to build products that solve critical, human problems.</p>
+        </div>
+    `
             },
             devmind: {
                 title: "DevMind: AI-Powered Developer Tool Enhancement",
