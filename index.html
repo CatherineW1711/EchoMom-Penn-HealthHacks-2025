@@ -6,6 +6,7 @@
     <title>Catherine Wang - Product Manager Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root {
             --primary: #2C3E50;
@@ -469,146 +470,6 @@
             color: var(--secondary);
         }
         
-        /* Additional Modal Styles */
-        .market-size-visual {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 15px;
-            padding: 40px;
-            color: white;
-            margin: 30px 0;
-            text-align: center;
-        }
-        
-        .market-size-visual h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-        }
-        
-        .market-segments {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 20px;
-        }
-        
-        .segment {
-            flex: 1;
-            min-width: 150px;
-        }
-        
-        .segment-value {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-        
-        .segment-label {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-        
-        .impact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin: 20px 0;
-        }
-        
-        .impact-item {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-        }
-        
-        .impact-value {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 5px;
-        }
-        
-        .impact-desc {
-            font-size: 0.9rem;
-            color: var(--secondary);
-        }
-        
-        .phase-timeline {
-            position: relative;
-            padding: 20px 0;
-            margin: 30px 0;
-        }
-        
-        .phase-timeline::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: #e0e0e0;
-        }
-        
-        .phase-item {
-            display: inline-block;
-            width: 33.33%;
-            text-align: center;
-            position: relative;
-        }
-        
-        .phase-circle {
-            width: 60px;
-            height: 60px;
-            background: var(--accent);
-            border-radius: 50%;
-            margin: 0 auto 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .phase-title {
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 5px;
-        }
-        
-        .phase-desc {
-            font-size: 0.85rem;
-            color: var(--secondary);
-        }
-        
-        .roi-visual {
-            background: #f8f9fa;
-            border-radius: 12px;
-            padding: 30px;
-            margin: 30px 0;
-        }
-        
-        .roi-bar {
-            height: 40px;
-            background: linear-gradient(90deg, #27AE60 0%, #2ecc71 100%);
-            border-radius: 20px;
-            position: relative;
-            margin: 20px 0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        .roi-label {
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: white;
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-        
         /* Image Upload */
         .upload-container {
             margin: 20px 0;
@@ -631,6 +492,176 @@
         
         #image-upload {
             display: none;
+        }
+        
+        /* New styles for enhanced content */
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin: 30px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #edf2f7;
+        }
+        
+        .section-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-right: 15px;
+        }
+        
+        .section-header h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin: 0;
+        }
+        
+        .chart-container {
+            width: 100%;
+            height: 300px;
+            margin: 25px 0;
+        }
+        
+        .roadmap-container {
+            display: flex;
+            flex-direction: column;
+            margin: 30px 0;
+            position: relative;
+        }
+        
+        .roadmap-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+            width: 3px;
+            background: var(--accent);
+            z-index: 1;
+        }
+        
+        .roadmap-item {
+            display: flex;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .roadmap-date {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .roadmap-content {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            flex: 1;
+            border-left: 4px solid var(--accent);
+        }
+        
+        .roadmap-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .stakeholder-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .stakeholder-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid var(--accent);
+        }
+        
+        .stakeholder-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .feature-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .feature-icon {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-right: 15px;
+        }
+        
+        .feature-content h4 {
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+        
+        .metric-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            border: 1px solid #edf2f7;
+        }
+        
+        .metric-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 5px;
+        }
+        
+        .metric-label {
+            font-size: 0.9rem;
+            color: var(--secondary);
+        }
+        
+        .conclusion-highlight {
+            background: linear-gradient(120deg, var(--primary-light) 0%, var(--primary) 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        
+        .conclusion-highlight h3 {
+            color: white;
+            margin-bottom: 15px;
         }
         
         /* Responsive */
@@ -679,9 +710,12 @@
                 height: 250px;
             }
             
-            .phase-item {
-                width: 100%;
-                margin-bottom: 20px;
+            .stakeholder-grid, .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .roadmap-container::before {
+                left: 22px;
             }
         }
     </style>
@@ -745,8 +779,8 @@
                         <p>AI-powered postpartum depression screening tool with comprehensive GTM strategy for healthcare providers.</p>
                         <div class="project-skills">
                             <span class="skill-tag">Product Strategy</span>
+                            <span class="skill-tag">GTM Planning</span>
                             <span class="skill-tag">Market Analysis</span>
-                            <span class="skill-tag">Health Equity</span>
                         </div>
                         <a href="#" class="btn view-project" data-project="echomom">View Case Study</a>
                     </div>
@@ -893,6 +927,11 @@
             <div class="close-modal">&times;</div>
             <div class="modal-body" id="modal-body">
                 <!-- Content will be loaded dynamically -->
+            <div class="upload-container">
+                <label for="modal-image-upload" class="upload-btn">
+                    <i class="fas fa-upload"></i> Upload Additional Project Image
+                </label>
+                <input type="file" id="modal-image-upload" accept="image/*" style="display: none;">
             </div>
         </div>
     </div>
@@ -928,13 +967,680 @@
             setupImageUpload('echomom-upload', '.project-card:nth-child(1) .project-img');
             setupImageUpload('devmind-upload', '.project-card:nth-child(2) .project-img');
             setupImageUpload('moviegame-upload', '.project-card:nth-child(3) .project-img');
+            
+            // Modal image upload
+            const modalUpload = document.getElementById('modal-image-upload');
+            modalUpload.addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.width = '100%';
+                        img.style.borderRadius = '8px';
+                        img.style.margin = '20px 0';
+                        document.getElementById('modal-body').appendChild(img);
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
 
             // Project data
             const projects = {
                 echomom: {
-                    title: "EchoMom: AI-Powered Postpartum Depression Screening Platform",
-                    subtitle: "Product Strategy Lead | Penn HealthHacks+ 2025",
+                    title: "EchoMom: AI-Powered Postpartum Depression Screening",
+                    subtitle: "Product Strategy Lead | Penn HealthHacks+ 2025 Hackathon",
                     content: `
                         <div style="background:linear-gradient(120deg, #2C3E50, #34495E);color:white;padding:40px;border-radius:10px;margin-bottom:30px;">
-                            <h2 style="margin-bottom:15px;">Transforming Maternal Healthcare Through AI Voice Analysis</h2>
-                            <p style="font-size:1.1rem;opacity:0.95;">EchoMom integrates seam
+                            <h2 style="margin-bottom:15px;">Work Sample: EchoMom – AI-Powered Postpartum Depression Screening</h2>
+                            <p>An AI voice analysis tool designed to integrate with clinical workflows to screen for postpartum depression (PPD) during routine postnatal check-ups.</p>
+                        </div>
+                        
+                        <div class="section-header">
+                            <div class="section-number">1.0</div>
+                            <h3>Project Overview & Problem Definition</h3>
+                        </div>
+                        <p><strong>Project:</strong> EchoMom – An AI voice analysis tool designed to integrate with clinical workflows to screen for postpartum depression (PPD) during routine postnatal check-ups.</p>
+                        <p><strong>Core Problem:</strong> Postpartum depression is a severe condition affecting approximately 1 in 8 women, yet over 50% of cases go undiagnosed. The standard screening method, the Edinburgh Postnatal Depression Scale (EPDS), is a self-reported questionnaire. It suffers from low compliance due to time constraints during appointments, social stigma, and a lack of immediate clinical follow-up, leading to critical gaps in maternal healthcare.</p>
+                        <p><strong>My Role:</strong> Product Strategy Lead (Penn HealthHacks+ 2025 Hackathon)</p>
+                        
+                        <div class="chart-container">
+                            <canvas id="problemChart"></canvas>
+                        </div>
+                        
+                        <div class="section-header">
+                            <div class="section-number">2.0</div>
+                            <h3>Market Sizing & Opportunity Analysis</h3>
+                        </div>
+                        <p>I led the initial market analysis to quantify the opportunity and define our target segment.</p>
+                        
+                        <div class="viz-container">
+                            <div class="viz-card">
+                                <div class="viz-number">$2.8B</div>
+                                <div class="viz-label">TAM: U.S. Maternal Health Tech Market</div>
+                            </div>
+                            <div class="viz-card">
+                                <div class="viz-number">11K</div>
+                                <div class="viz-label">OB/GYN Practices (SOM)</div>
+                            </div>
+                            <div class="viz-card">
+                                <div class="viz-number">1 in 8</div>
+                                <div class="viz-label">Women Affected by PPD</div>
+                            </div>
+                        </div>
+                        
+                        <p><strong>Strategic Focus:</strong> Our analysis highlighted a significant disparity in PPD screening rates for women in underserved and low-income communities. We deliberately prioritized health equity, designing our go-to-market and product strategy to first address these populations that experience the greatest gap in care.</p>
+                        
+                        <div class="chart-container">
+                            <canvas id="marketChart"></canvas>
+                        </div>
+                        
+                        <div class="section-header">
+                            <div class="section-number">3.0</div>
+                            <h3>User & Stakeholder Discovery</h3>
+                        </div>
+                        <p>I identified and defined the needs of three core user groups to shape the product requirements.</p>
+                        
+                        <div class="stakeholder-grid">
+                            <div class="stakeholder-card">
+                                <div class="stakeholder-title">Patients (New Mothers)</div>
+                                <p><strong>Need:</strong> A private, low-stigma, and non-judgmental way to express their mental state. Desire for immediate reassurance and clear next steps.</p>
+                            </div>
+                            
+                            <div class="stakeholder-card">
+                                <div class="stakeholder-title">Providers (OB/GYNs & Nurses)</div>
+                                <p><strong>Need:</strong> A tool that integrates seamlessly into existing, time-pressured workflows (<5 mins). Requires actionable results, not raw data, to facilitate quick clinical decision-making.</p>
+                            </div>
+                            
+                            <div class="stakeholder-card">
+                                <div class="stakeholder-title">Healthcare Systems (Payers & Administrators)</div>
+                                <p><strong>Need:</strong> A solution that improves quality of care metrics, reduces long-term treatment costs through early detection, and ensures HIPAA compliance.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="section-header">
+                            <div class="section-number">4.0</div>
+                            <h3>Solution & Product Definition</h3>
+                        </div>
+                        <p>The proposed solution was a HIPAA-compliant mobile/web application that uses a 90-second voice sample from the mother to analyze vocal biomarkers for PPD risk.</p>
+                        
+                        <h4 style="color:#2C3E50;margin:20px 0 15px;">Key Features & Rationale:</h4>
+                        
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fas fa-link"></i></div>
+                                <div class="feature-content">
+                                    <h4>Seamless EHR Integration</h4>
+                                    <p>To avoid double-data entry and ensure adoption, I prioritized a roadmap that included integration with major Electronic Health Record (EHR) systems like Epic and Cerner. This allows for one-click access and automatic logging of screening results.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fas fa-exchange-alt"></i></div>
+                                <div class="feature-content">
+                                    <h4>Automated Referral Tracking</h4>
+                                    <p>The product was designed to not just identify risk but to close the loop. It provided a curated list of in-network mental health professionals and could automatically generate a referral note within the EHR, directly addressing the "what next?" problem.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fas fa-cloud"></i></div>
+                                <div class="feature-content">
+                                    <h4>Scalable Cloud Deployment</h4>
+                                    <p>I advocated for an AWS cloud architecture to ensure scalability, security, and the ability to deploy quickly across different healthcare networks without on-premise hardware constraints.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h4 style="color:#2C3E50;margin:20px 0 15px;">Product Roadmap:</h4>
+                        
+                        <div class="roadmap-container">
+                            <div class="roadmap-item">
+                                <div class="roadmap-date">Q1</div>
+                                <div class="roadmap-content">
+                                    <div class="roadmap-title">MVP Development</div>
+                                    <p>Core voice analysis algorithm, basic HIPAA compliance, web application interface</p>
+                                </div>
+                            </div>
+                            
+                            <div class="roadmap-item">
+                                <div class="roadmap-date">Q2</div>
+                                <div class="roadmap-content">
+                                    <div class="roadmap-title">Pilot Program</div>
+                                    <p>Integration with 1-2 EHR systems, pilot deployment at 3 academic medical centers</p>
+                                </div>
+                            </div>
+                            
+                            <div class="roadmap-item">
+                                <div class="roadmap-date">Q3</div>
+                                <div class="roadmap-content">
+                                    <div class="roadmap-title">Expanded Integration</div>
+                                    <p>Additional EHR integrations, automated referral system, mobile app development</p>
+                                </div>
+                            </div>
+                            
+                            <div class="roadmap-item">
+                                <div class="roadmap-date">Q4</div>
+                                <div class="roadmap-content">
+                                    <div class="roadmap-title">Scale & Optimization</div>
+                                    <p>Advanced analytics dashboard, multilingual support, expansion to pediatric practices</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="section-header">
+                            <div class="section-number">5.0</div>
+                            <h3>Go-to-Market Strategy</h3>
+                        </div>
+                        <p>I designed a GTM strategy targeting OB/GYN providers, recognizing them as the key adoption decision-makers.</p>
+                        
+                        <div class="viz-container">
+                            <div class="viz-card">
+                                <div class="viz-number">1</div>
+                                <div class="viz-label">Channel: Direct Sales & Partnerships</div>
+                            </div>
+                            <div class="viz-card">
+                                <div class="viz-number">2</div>
+                                <div class="viz-label">Pilot Program: 6-Month Free Trial</div>
+                            </div>
+                            <div class="viz-card">
+                                <div class="viz-number">3</div>
+                                <div class="viz-label">Messaging: Efficiency & Outcomes</div>
+                            </div>
+                        </div>
+                        
+                        <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
+                            <li><strong>Channel:</strong> Direct sales and partnerships with regional healthcare networks.</li>
+                            <li><strong>Pilot Program:</strong> Strategy involved offering a free 6-month pilot program to influential academic medical centers to generate clinical validation and case studies.</li>
+                            <li><strong>Messaging:</strong> Focused on clinical efficiency ("Save 5 minutes per patient") and improved outcomes ("Increase your early detection rate"), aligning directly with providers' operational and clinical goals.</li>
+                            <li><strong>Value Proposition:</strong> Emphasized the tool's role in improving equitable access to mental health screening for all patient demographics.</li>
+                        </ul>
+                        
+                        <div class="chart-container">
+                            <canvas id="gtmChart"></canvas>
+                        </div>
+                        
+                        <div class="section-header">
+                            <div class="section-number">6.0</div>
+                            <h3>Success Metrics & Business Case</h3>
+                        </div>
+                        <p>I built a comprehensive business case to forecast impact and support strategic prioritization.</p>
+                        
+                        <div class="metric-grid">
+                            <div class="metric-card">
+                                <div class="metric-value">25%</div>
+                                <div class="metric-label">Increase in Early Detection</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value">40%</div>
+                                <div class="metric-label">Reduction in Per-Screen Costs</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value">>80%</div>
+                                <div class="metric-label">Target Screening Rate</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value"><24h</div>
+                                <div class="metric-label">Screening to Referral Time</div>
+                            </div>
+                        </div>
+                        
+                        <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
+                            <li><strong>Forecasted Efficacy:</strong> Modeled a 25% increase in early detection rates based on studies of AI-driven vocal analysis and improved screening compliance.</li>
+                            <li><strong>Cost Reduction:</strong> Projected a 40% reduction in per-screen costs by automating analysis and follow-up compared to manual EPDS administration and review.</li>
+                            <li><strong>Key Performance Indicators (KPIs):</strong>
+                                <ul style="list-style-type:circle;margin-left:30px;margin-top:10px;">
+                                    <li>% of eligible patients screened (Target: >80% in pilot practices)</li>
+                                    <li>Time from screening to referral (Target: <24 hours)</li>
+                                    <li>Provider adoption rate (Target: >60% of providers in a pilot clinic)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+                        <div class="chart-container">
+                            <canvas id="metricsChart"></canvas>
+                        </div>
+                        
+                        <div class="section-header">
+                            <div class="section-number">7.0</div>
+                            <h3>Conclusion</h3>
+                        </div>
+                        
+                        <div class="conclusion-highlight">
+                            <h3>Strategic Impact & Leadership</h3>
+                            <p>The EchoMom project involved defining a complex product strategy at the intersection of AI, healthcare, and equitable access. I led the effort to:</p>
+                            <ul style="margin-left:20px;margin-top:15px;">
+                                <li>Quantify a significant market opportunity with a focus on an underserved population</li>
+                                <li>Translate user pain points into a technical product roadmap with a clear MVP and future integrations</li>
+                                <li>Develop a pragmatic go-to-market plan tailored to the healthcare sales cycle</li>
+                                <li>Build a data-driven business case to prove viability and impact on both cost and patient outcomes</li>
+                            </ul>
+                            <p style="margin-top:15px;">This experience demonstrates my ability to operate in ambiguous, cross-functional environments to build products that solve critical, human problems.</p>
+                        </div>
+                        
+                        <div class="upload-container">
+                            <label for="modal-image-upload" class="upload-btn">
+                                <i class="fas fa-upload"></i> Upload Additional Project Image
+                            </label>
+                            <input type="file" id="modal-image-upload" accept="image/*" style="display: none;">
+                        </div>
+                    `
+                },
+                devmind: {
+                    title: "DevMind: AI-Powered Developer Tool Enhancement",
+                    subtitle: "Product Strategy & Analytics Lead | Penn AI Hackathon 2025 Finalist",
+                    content: `
+                        <div style="background:linear-gradient(120deg, #2C3E50, #34495E);color:white;padding:40px;border-radius:10px;margin-bottom:30px;">
+                            <h2 style="margin-bottom:15px;">Revolutionizing Code Quality for Developers</h2>
+                            <p>DevMind is an AI-powered developer tool that integrates directly into IDEs to automatically maintain code quality standards in real-time.</p>
+                        </div>
+                        
+                        <div class="viz-container">
+                            <div class="viz-card">
+                                <div class="viz-number">100+</div>
+                                <div class="viz-label">Developers Surveyed</div>
+                            </div>
+                            <div class="viz-card">
+                                <div class="viz-number">70%</div>
+                                <div class="viz-label">Struggle with Code Consistency</div>
+                            </div>
+                            <div class="viz-card">
+                                <div class="viz-number">48h</div>
+                                <div class="viz-label">MVP Development</div>
+                            </div>
+                        </div>
+                        
+                        <h3 style="color:#2C3E50;margin:25px 0 15px;">User Research & Problem Validation</h3>
+                        <p>I conducted qualitative interviews with 15 developers followed by a quantitative survey of 100+ developers across various experience levels. The research revealed that 70% of developers struggle with maintaining consistent code quality across projects, primarily due to:</p>
+                        
+                        <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
+                            <li>Mental fatigue from constantly addressing minor code quality issues</li>
+                            <li>Broken flow state when stopping to fix formatting or style violations</li>
+                            <li>Inconsistency between personal coding style and team requirements</li>
+                        </ul>
+                        
+                        <div class="user-quotes">
+                            <div class="quote-card">
+                                <p class="quote-text">"I spend at least 2-3 hours each week just fixing inconsistent formatting and patterns across our codebase."</p>
+                                <p class="quote-author">— Mid-level Frontend Developer</p>
+                            </div>
+                            <div class="quote-card">
+                                <p class="quote-text">"Onboarding new team members takes twice as long when our codebase lacks consistency."</p>
+                                <p class="quote-author">— Engineering Team Lead</p>
+                            </div>
+                        </div>
+                        
+                        <h3 style="color:#2C3E50;margin:25px 0 15px;">Product Strategy & Roadmap</h3>
+                        <p>Based on these findings, I developed a phased product roadmap:</p>
+                        
+                        <div class="roadmap">
+                            <div class="roadmap-item">
+                                <div class="roadmap-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <div class="roadmap-content">
+                                    <div class="roadmap-title">Phase 1 (MVP)</div>
+                                    <p>Python support with automatic formatting and basic style fixes</p>
+                                </div>
+                            </div>
+                            
+                            <div class="roadmap-item">
+                                <div class="roadmap-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="roadmap-content">
+                                    <div class="roadmap-title">Phase 2 (1-3 months)</div>
+                                    <p>JavaScript/TypeScript support with intelligent code suggestions</p>
+                                </div>
+                            </div>
+                            
+                            <div class="roadmap-item">
+                                <div class="roadmap-icon">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <div class="roadmap-content">
+                                    <div class="roadmap-title">Phase 3 (3-6 months)</div>
+                                    <p>Team analytics and CI/CD integration capabilities</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3 style="color:#2C3E50;margin:25px 0 15px;">Execution & Team Leadership</h3>
+                        <p>I managed a team of four engineers (2 backend, 1 frontend, 1 ML) through rapid development cycles:</p>
+                        
+                        <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
+                            <li>Creating detailed user stories and acceptance criteria</li>
+                            <li>Prioritizing features based on technical feasibility and user impact</li>
+                            <li>Facilitating daily standups and removing development blockers</li>
+                            <li>Making strategic trade-offs between functionality and performance</li>
+                        </ul>
+                        
+                        <p>We delivered a functional VS Code extension that could automatically correct PEP8 violations and suggest code optimizations in real-time.</p>
+                        
+                        <h3 style="color:#2C3E50;margin:25px 0 15px;">Results & Impact</h3>
+                        <p>The project achieved:</p>
+                        
+                        <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
+                            <li>Finalist position among 50+ teams at Penn AI Hackathon 2025</li>
+                            <li>Positive feedback from early users on the non-disruptive implementation</li>
+                            <li>30% estimated reduction in time spent on manual code quality improvements</li>
+                            <li>Successful demonstration of core functionality including real-time code analysis and automatic fixes</li>
+                        </ul>
+                        
+                        <div style="background:#f8f9fa;padding:20px;border-radius:10px;margin:30px 0;">
+                            <h4 style="color:#2C3E50;margin-bottom:15px;">Product Manager Impact</h4>
+                            <p>This project demonstrates my ability to conduct user research before solutioning, maintain clear communication between technical team members, make deliberate trade-offs under time constraints, and focus on seamless integration with existing workflows.</p>
+                        </div>
+                    `
+                },
+                moviegame: {
+                    title: "Movie Game: Interactive Entertainment Platform",
+                    subtitle: "Product Manager & Technical Lead | Data-Driven Optimization",
+                    content: `
+                        <div style="background:linear-gradient(120deg, #2C3E50, #34495E);color:white;padding:40px;border-radius:10px;margin-bottom:30px;">
+                            <h2 style="margin-bottom:15px;">Enhancing User Engagement Through Data-Driven Optimization</h2>
+                            <p>Movie Game is an interactive entertainment platform designed to engage users through gamified content experiences.</p>
+                        </div>
+                        
+                        <div class="viz-container">
+                            <div class="viz-card">
+                                <div class="viz-number">18%</div>
+                                <div class="viz-label">Increase in Day 7 Retention</div>
+                            </div>
+                            <div class="viz-card">
+                                <div class="viz-number">15%</div>
+                                <div class="viz-label">Growth in Session Length</div>
+                            </div>
+                            <div class="viz-card">
+                                <div class="viz-number">56%</div>
+                                <div class="viz-label">Faster Response Time</div>
+                            </div>
+                        </div>
+                        
+                        <h3 style="color:#2C3E50;margin:25px 0 15px;">Problem Identification & Analysis</h3>
+                        <p>Post-launch data revealed critical challenges:</p>
+                        
+                        <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
+                            <li>Day 7 retention rates stagnated at 28%</li>
+                            <li>Average session length remained below 3.2 minutes</li>
+                            <li>System response times averaged 450ms, causing 40% drop-off during loading screens</li>
+                        </ul>
+                        
+                        <p>I initiated a comprehensive analysis to identify improvement opportunities:</p>
+                        
+                        <div class="process-flow">
+                            <div class="process-step">
+                                <div class="process-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="process-title">Cohort Analysis</div>
+                                <p>Segmented 15,000 users by acquisition date and feature usage</p>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="process-icon">
+                                    <i class="fas fa-vial"></i>
+                                </div>
+                                <div class="process-title">A/B Testing</div>
+                                <p>Conducted 4 controlled experiments on feature introductions</p>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="process-icon">
+                                    <i class="fas fa-map"></i>
+                                </div>
+                                <div class="process-title">Session Analytics</div>
+                                <p>Mapped 12,000 user sessions to identify drop-off points</p>
+                            </div>
+                        </div>
+                        
+                        <h3 style="color:#2C3E50;margin:25px 0 15px;">Data-Driven Decision Making</h3>
+                        <p><strong>Retention Optimization:</strong></p>
+                        <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
+                            <li>Identified that users engaging with social features showed 35% higher Day 7 retention</li>
+                            <li>Implemented personalized daily challenges, increasing Day 7 retention from 28% to 46%</li>
+                            <li>Introduced streak rewards that improved weekly returning users by 22%</li>
+                        </ul>
+                        
+                        <p><strong>Feature Prioritization:</strong></p>
+                        <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
+                            <li>A/B testing revealed reward-driven quests increased session frequency by 22%</li>
+                            <li>Prioritized development of progressive reward system based on usage data</li>
+                            <li>Allocated engineering resources to features showing highest retention impact</li>
+                        </ul>
+                        
+                        <h3 style="color:#2C3E50;margin:25px 0 15px;">Technical Performance Improvements</h3>
+                        <p><strong>System Optimization:</strong></p>
+                        <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
+                            <li>Led database indexing optimization reducing query time by 60%</li>
+                            <li>Implemented caching strategy cutting API response times by 45%</li>
+                            <li>Achieved consistent system response time under 200ms (from 450ms)</li>
+                        </ul>
+                        
+                        <p><strong>Impact Measurement:</strong></p>
+                        <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
+                            <li>15% increase in average session length (3.2 to 3.7 minutes)</li>
+                            <li>40% reduction in loading screen drop-off rate</li>
+                            <li>12% increase in daily active users (DAU)</li>
+                        </ul>
+                        
+                        <h3 style="color:#2C3E50;margin:25px 0 15px;">Business Impact</h3>
+                        <p>The implemented changes delivered measurable results:</p>
+                        
+                        <div class="viz-container">
+                            <div class="viz-card">
+                                <div class="viz-number">18%</div>
+                                <div class="viz-label">Increase in Day 7 Retention</div>
+                            </div>
+                            <div class="viz-card">
+                                <div class="viz-number">15%</div>
+                                <div class="viz-label">Growth in Session Length</div>
+                            </div>
+                            <div class="viz-card">
+                                <div class="viz-number">12%</div>
+                                <div class="viz-label">Rise in Daily Active Users</div>
+                            </div>
+                        </div>
+                        
+                        <div style="background:#f8f9fa;padding:20px;border-radius:10px;margin:30px 0;">
+                            <h4 style="color:#2C3E50;margin-bottom:15px;">Product Manager Impact</h4>
+                            <p>This project demonstrates my ability to translate quantitative analysis into product decisions that drive measurable business results, lead technical improvements that directly impact user engagement metrics, balance feature development with performance optimization, and communicate complex data insights to stakeholders effectively.</p>
+                        </div>
+                    `
+                }
+            };
+
+            // Modal functionality
+            const modal = document.getElementById('project-modal');
+            const modalBody = document.getElementById('modal-body');
+            const closeModal = document.querySelector('.close-modal');
+            const viewProjectButtons = document.querySelectorAll('.view-project');
+            
+            // Open modal
+            viewProjectButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const projectId = this.getAttribute('data-project');
+                    const project = projects[projectId];
+                    
+                    if (project) {
+                        modalBody.innerHTML = `
+                            <h2 style="color: #2C3E50; margin-bottom: 10px;">${project.title}</h2>
+                            <p style="color: #7F8C8D; margin-bottom: 30px;">${project.subtitle}</p>
+                            ${project.content}
+                        `;
+                        modal.style.display = 'block';
+                        document.body.style.overflow = 'hidden';
+                        
+                        // Initialize charts for echomom project
+                        if (projectId === 'echomom') {
+                            setTimeout(initEchomomCharts, 100);
+                        }
+                    }
+                });
+            });
+            
+            // Close modal
+            closeModal.addEventListener('click', function() {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+            
+            // Close modal when clicking outside
+            window.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            // Initialize EchoMom charts
+            function initEchomomCharts() {
+                // Problem Definition Chart
+                const problemCtx = document.getElementById('problemChart').getContext('2d');
+                new Chart(problemCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Diagnosed PPD', 'Undiagnosed PPD', 'No PPD'],
+                        datasets: [{
+                            data: [12.5, 12.5, 75],
+                            backgroundColor: ['#E74C3C', '#3498DB', '#2ECC71']
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'PPD Diagnosis Gap (1 in 8 Women Affected)',
+                                font: { size: 16 }
+                            },
+                            legend: { position: 'bottom' }
+                        }
+                    }
+                });
+                
+                // Market Analysis Chart
+                const marketCtx = document.getElementById('marketChart').getContext('2d');
+                new Chart(marketCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['High-Income', 'Middle-Income', 'Low-Income', 'Underserved'],
+                        datasets: [{
+                            label: 'Screening Rate (%)',
+                            data: [78, 62, 45, 32],
+                            backgroundColor: '#3498DB'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'PPD Screening Rates by Demographic',
+                                font: { size: 16 }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 100,
+                                title: {
+                                    display: true,
+                                    text: 'Screening Rate (%)'
+                                }
+                            }
+                        }
+                    }
+                });
+                
+                // GTM Strategy Chart
+                const gtmCtx = document.getElementById('gtmChart').getContext('2d');
+                new Chart(gtmCtx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+                        datasets: [{
+                            label: 'Pilot Practices',
+                            data: [3, 12, 25, 40],
+                            borderColor: '#3498DB',
+                            fill: false
+                        }, {
+                            label: 'Referral Rate',
+                            data: [35, 48, 62, 75],
+                            borderColor: '#2ECC71',
+                            fill: false
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Projected Adoption & Referral Rates',
+                                font: { size: 16 }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 100,
+                                title: {
+                                    display: true,
+                                    text: 'Percentage'
+                                }
+                            }
+                        }
+                    }
+                });
+                
+                // Metrics Chart
+                const metricsCtx = document.getElementById('metricsChart').getContext('2d');
+                new Chart(metricsCtx, {
+                    type: 'radar',
+                    data: {
+                        labels: ['Detection Rate', 'Cost Efficiency', 'Screening Coverage', 'Provider Adoption', 'Referral Speed'],
+                        datasets: [{
+                            label: 'Current Standard',
+                            data: [50, 60, 55, 45, 40],
+                            fill: true,
+                            backgroundColor: 'rgba(52, 152, 219, 0.2)',
+                            borderColor: 'rgba(52, 152, 219, 1)',
+                            pointBackgroundColor: 'rgba(52, 152, 219, 1)'
+                        }, {
+                            label: 'With EchoMom',
+                            data: [75, 85, 80, 70, 75],
+                            fill: true,
+                            backgroundColor: 'rgba(46, 204, 113, 0.2)',
+                            borderColor: 'rgba(46, 204, 113, 1)',
+                            pointBackgroundColor: 'rgba(46, 204, 113, 1)'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Performance Improvement Projections',
+                                font: { size: 16 }
+                            }
+                        },
+                        scales: {
+                            r: {
+                                angleLines: { display: true },
+                                suggestedMin: 0,
+                                suggestedMax: 100
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
