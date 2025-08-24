@@ -143,9 +143,18 @@
         
         .hero p {
             font-size: 1.2rem;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             opacity: 0.9;
             line-height: 1.5;
+        }
+        
+        .hero-value-prop {
+            font-size: 1.1rem !important;
+            font-weight: 500 !important;
+            margin-bottom: 30px !important;
+            opacity: 0.95 !important;
+            max-width: 600px;
+            line-height: 1.6 !important;
         }
         
         .hero-buttons {
@@ -304,6 +313,56 @@
         .about-text p {
             margin-bottom: 20px;
             color: var(--secondary);
+        }
+        
+        .skills-snapshot {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            border: 1px solid #dee2e6;
+        }
+        
+        .skills-snapshot h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+        
+        .skills-grid-snapshot {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .skill-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-item i {
+            font-size: 1.5rem;
+            color: var(--accent);
+            width: 24px;
+            text-align: center;
+        }
+        
+        .skill-item span {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 1rem;
         }
         
         .skills-grid {
@@ -772,6 +831,57 @@
             margin-bottom: 15px;
         }
         
+        /* Visual Placeholders */
+        .visual-placeholder {
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .visual-placeholder img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid #eee;
+        }
+        
+        .placeholder-content {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 60px 40px;
+            border-radius: 15px;
+            border: 2px dashed #dee2e6;
+            margin: 20px 0;
+        }
+        
+        .placeholder-visual {
+            text-align: center;
+        }
+        
+        .placeholder-visual i {
+            font-size: 4rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+            opacity: 0.7;
+        }
+        
+        .placeholder-visual h4 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .placeholder-visual p {
+            color: var(--secondary);
+            font-size: 1.1rem;
+        }
+        
+        .visual-caption {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: var(--secondary);
+            font-style: italic;
+        }
+        
         /* Responsive */
         @media (max-width: 992px) {
             .about-content {
@@ -869,8 +979,9 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>Catherine Wang</h1>
-                    <h2>Driving Product Decisions with Financial Insights & Technical Vision</h2>
-                    <p>UPenn CS Master's | Former Financial Analyst | AI Product Practitioner<br>Bridging financial acumen, technical expertise, and data-driven decision making</p>
+                    <h2>Product Strategist | Bridging Technical Depth & Financial Rigor</h2>
+                    <p>CS Master @ UPenn | Former Accountant | Aspiring Product Manager</p>
+                    <p class="hero-value-prop">I leverage my dual expertise in software engineering and financial operations to build data-driven products that solve complex, real-world problems.</p>
                     <div class="hero-buttons">
                         <a href="#product-thinking" class="btn">View Product Analysis →</a>
                         <a href="#resume" class="btn btn-outline">Download Resume ↓</a>
@@ -1029,6 +1140,28 @@
             
             <div class="about-content">
                 <div class="about-text">
+                    <div class="skills-snapshot">
+                        <h3>Core Competencies</h3>
+                        <div class="skills-grid-snapshot">
+                            <div class="skill-item">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Product Strategy</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Data & Metrics</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-code"></i>
+                                <span>Technical Execution</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-dollar-sign"></i>
+                                <span>Business Acumen</span>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <h2>From Financial Analysis to AI Product Strategy</h2>
                     <p>From analyzing anomalous patterns in financial data to building AI-driven health screening tools, my career path may seem to jump around, but there's a clear internal logic—I've always been searching for ways to use data and technology to solve real business problems.</p>
                     <p>My product thinking germinated at Kemba Credit Union as an accountant. When I designed a fraud detection system for this $1.6B financial institution, I realized the most valuable work wasn't simply executing analysis, but understanding business pain points, identifying data opportunities, and translating technical solutions into measurable business value. That project automating manual processes and saving 30% labor costs across 20+ branches gave me my first taste of "product thinking" magic.</p>
@@ -1914,6 +2047,22 @@
                         <h3>User Experience Journey Analysis</h3>
                     </div>
                     
+                    <div class="visual-placeholder">
+                        <img 
+                            src="/images/jira-user-journey-map.png" 
+                            alt="Jira用户体验旅程图：以时间线展示用户从创建需求到回顾的完整流程，突出情绪曲线和关键痛点。" 
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                        />
+                        <div class="placeholder-content" style="display: none;">
+                            <div class="placeholder-visual">
+                                <i class="fas fa-route"></i>
+                                <h4>User Journey Map</h4>
+                                <p>Visualizing pain points and emotional state throughout the process</p>
+                            </div>
+                        </div>
+                        <p class="visual-caption"><em>Visual: User Journey Map visualizing pain points and emotional state throughout the process.</em></p>
+                    </div>
+                    
                     <div class="roadmap-container">
                         <div class="roadmap-item">
                             <div class="roadmap-date">1</div>
@@ -2114,6 +2263,22 @@
                         <li>Provide concise visual interface showing recommendation ranges and confidence intervals</li>
                     </ul>
                     
+                    <div class="visual-placeholder">
+                        <img 
+                            src="/images/jira-capacity-predictor-ui.png" 
+                            alt="Jira智能容量预测功能UI概念图：展示在Sprint Planning界面中一个建议面板，显示预测的Story Point范围和建议。" 
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                        />
+                        <div class="placeholder-content" style="display: none;">
+                            <div class="placeholder-visual">
+                                <i class="fas fa-brain"></i>
+                                <h4>AI Capacity Predictor UI</h4>
+                                <p>UI concept for the AI-powered capacity prediction feature</p>
+                            </div>
+                        </div>
+                        <p class="visual-caption"><em>Visual: UI concept for the AI-powered capacity prediction feature.</em></p>
+                    </div>
+                    
                     <h4 style="color:#2C3E50;margin:20px 0 15px;">Validation Method</h4>
                     <p><strong>A/B Test Design:</strong></p>
                     <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
@@ -2203,6 +2368,22 @@
                         <h3>Solution</h3>
                     </div>
                     <p>FinTrack Campus is a smart financial assistant specifically designed for college students, seamlessly combining financial management with financial education:</p>
+                    
+                    <div class="visual-placeholder">
+                        <img 
+                            src="/images/fintrack-wireframe.png" 
+                            alt="FinTrack Campus线框图：展示主仪表板、消费分类页面和财务健康评分卡的布局。" 
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                        />
+                        <div class="placeholder-content" style="display: none;">
+                            <div class="placeholder-visual">
+                                <i class="fas fa-mobile-alt"></i>
+                                <h4>App Wireframes</h4>
+                                <p>Low-fidelity wireframes of the key app screens</p>
+                            </div>
+                        </div>
+                        <p class="visual-caption"><em>Visual: Low-fidelity wireframes of the key app screens.</em></p>
+                    </div>
                     
                     <h4 style="color:#2C3E50;margin:20px 0 15px;">Core Value Propositions:</h4>
                     <div class="feature-grid">
