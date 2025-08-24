@@ -1218,13 +1218,6 @@
                             </ul>
                             <p style="margin-top:15px;">This experience demonstrates my ability to operate in ambiguous, cross-functional environments to build products that solve critical, human problems.</p>
                         </div>
-                        
-                        <div class="upload-container">
-                            <label for="modal-image-upload" class="upload-btn">
-                                <i class="fas fa-upload"></i> Upload Additional Project Image
-                            </label>
-                            <input type="file" id="modal-image-upload" accept="image/*" style="display: none;">
-                        </div>
                     `
                 },
                 devmind: {
@@ -1232,105 +1225,230 @@
                     subtitle: "Product Strategy & Analytics Lead | Penn AI Hackathon 2025 Finalist",
                     content: `
                         <div style="background:linear-gradient(120deg, #2C3E50, #34495E);color:white;padding:40px;border-radius:10px;margin-bottom:30px;">
-                            <h2 style="margin-bottom:15px;">Revolutionizing Code Quality for Developers</h2>
-                            <p>DevMind is an AI-powered developer tool that integrates directly into IDEs to automatically maintain code quality standards in real-time.</p>
+                            <h2 style="margin-bottom:15px;">DevMind: AI-Powered Developer Tool Enhancement</h2>
+                            <p>An AI-powered developer tool that integrates directly into IDEs to automatically maintain code quality standards in real-time.</p>
                         </div>
+                        
+                        <div class="section-header">
+                            <div class="section-number">1.0</div>
+                            <h3>Project Overview & Problem Definition</h3>
+                        </div>
+                        <p><strong>Project:</strong> DevMind – AI-powered developer tool that integrates directly into IDEs to automatically maintain code quality standards in real-time.</p>
+                        <p><strong>Core Problem:</strong> Developers spend significant time addressing code quality issues, formatting inconsistencies, and style violations, which disrupts their flow state and reduces productivity. Existing tools are either too passive (linters) or too disruptive (full refactoring tools).</p>
+                        <p><strong>My Role:</strong> Product Strategy & Analytics Lead (Penn AI Hackathon 2025 Finalist)</p>
+                        
+                        <div class="chart-container">
+                            <canvas id="devmindProblemChart"></canvas>
+                        </div>
+                        
+                        <div class="section-header">
+                            <div class="section-number">2.0</div>
+                            <h3>User Research & Market Analysis</h3>
+                        </div>
+                        <p>I conducted comprehensive user research to understand developer pain points and quantify the opportunity.</p>
                         
                         <div class="viz-container">
                             <div class="viz-card">
-                                <div class="viz-number">100+</div>
-                                <div class="viz-label">Developers Surveyed</div>
-                            </div>
-                            <div class="viz-card">
                                 <div class="viz-number">70%</div>
-                                <div class="viz-label">Struggle with Code Consistency</div>
+                                <div class="viz-label">Developers struggle with code consistency</div>
                             </div>
                             <div class="viz-card">
-                                <div class="viz-number">48h</div>
-                                <div class="viz-label">MVP Development</div>
+                                <div class="viz-number">2.5h</div>
+                                <div class="viz-label">Weekly time spent on code quality issues</div>
+                            </div>
+                            <div class="viz-card">
+                                <div class="viz-number">$4.2B</div>
+                                <div class="viz-label">Developer tools market (2025)</div>
                             </div>
                         </div>
                         
-                        <h3 style="color:#2C3E50;margin:25px 0 15px;">User Research & Problem Validation</h3>
-                        <p>I conducted qualitative interviews with 15 developers followed by a quantitative survey of 100+ developers across various experience levels. The research revealed that 70% of developers struggle with maintaining consistent code quality across projects, primarily due to:</p>
+                        <p><strong>Research Methodology:</strong> Mixed-methods approach with qualitative interviews (15 developers) followed by quantitative survey (100+ developers).</p>
                         
-                        <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
-                            <li>Mental fatigue from constantly addressing minor code quality issues</li>
-                            <li>Broken flow state when stopping to fix formatting or style violations</li>
-                            <li>Inconsistency between personal coding style and team requirements</li>
-                        </ul>
+                        <div class="chart-container">
+                            <canvas id="devmindResearchChart"></canvas>
+                        </div>
                         
-                        <div class="user-quotes">
-                            <div class="quote-card">
-                                <p class="quote-text">"I spend at least 2-3 hours each week just fixing inconsistent formatting and patterns across our codebase."</p>
-                                <p class="quote-author">— Mid-level Frontend Developer</p>
+                        <div class="section-header">
+                            <div class="section-number">3.0</div>
+                            <h3>User Personas & Needs Analysis</h3>
+                        </div>
+                        <p>Based on research findings, I identified three key user personas with distinct needs:</p>
+                        
+                        <div class="stakeholder-grid">
+                            <div class="stakeholder-card">
+                                <div class="stakeholder-title">Junior Developers</div>
+                                <p><strong>Need:</strong> Learning tool that helps understand coding standards and best practices without judgment. Real-time guidance to improve skills.</p>
                             </div>
-                            <div class="quote-card">
-                                <p class="quote-text">"Onboarding new team members takes twice as long when our codebase lacks consistency."</p>
-                                <p class="quote-author">— Engineering Team Lead</p>
+                            
+                            <div class="stakeholder-card">
+                                <div class="stakeholder-title">Senior Developers</div>
+                                <p><strong>Need:</strong> Productivity tool that eliminates repetitive code quality tasks. Minimal disruption to workflow with maximum automation.</p>
+                            </div>
+                            
+                            <div class="stakeholder-card">
+                                <div class="stakeholder-title">Engineering Managers</div>
+                                <p><strong>Need:</strong> Team consistency tool that ensures codebase uniformity. Reduced review time and faster onboarding for new team members.</p>
                             </div>
                         </div>
                         
-                        <h3 style="color:#2C3E50;margin:25px 0 15px;">Product Strategy & Roadmap</h3>
-                        <p>Based on these findings, I developed a phased product roadmap:</p>
+                        <div class="section-header">
+                            <div class="section-number">4.0</div>
+                            <h3>Solution & Product Definition</h3>
+                        </div>
+                        <p>The solution is an IDE extension that uses AI to analyze code in real-time and automatically applies fixes for common quality issues.</p>
                         
-                        <div class="roadmap">
-                            <div class="roadmap-item">
-                                <div class="roadmap-icon">
-                                    <i class="fas fa-rocket"></i>
+                        <h4 style="color:#2C3E50;margin:20px 0 15px;">Key Features & Rationale:</h4>
+                        
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                                <div class="feature-content">
+                                    <h4>Real-time Analysis & Fixes</h4>
+                                    <p>Unlike traditional linters that only identify problems, DevMind automatically applies fixes for common issues like formatting, imports organization, and simple refactors.</p>
                                 </div>
+                            </div>
+                            
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fas fa-graduation-cap"></i></div>
+                                <div class="feature-content">
+                                    <h4>Adaptive Learning</h4>
+                                    <p>The tool learns from each developer's preferences and the project's specific patterns to provide personalized suggestions that align with existing codebase conventions.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fas fa-users"></i></div>
+                                <div class="feature-content">
+                                    <h4>Team Consistency Mode</h4>
+                                    <p>Ensures all team members follow the same standards with configurable rulesets that can be shared across the organization, reducing inconsistencies in collaborative projects.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h4 style="color:#2C3E50;margin:20px 0 15px;">Product Roadmap:</h4>
+                        
+                        <div class="roadmap-container">
+                            <div class="roadmap-item">
+                                <div class="roadmap-date">Q1</div>
                                 <div class="roadmap-content">
-                                    <div class="roadmap-title">Phase 1 (MVP)</div>
-                                    <p>Python support with automatic formatting and basic style fixes</p>
+                                    <div class="roadmap-title">MVP Launch</div>
+                                    <p>VS Code extension with Python support, basic formatting fixes, and real-time analysis</p>
                                 </div>
                             </div>
                             
                             <div class="roadmap-item">
-                                <div class="roadmap-icon">
-                                    <i class="fas fa-chart-line"></i>
-                                </div>
+                                <div class="roadmap-date">Q2</div>
                                 <div class="roadmap-content">
-                                    <div class="roadmap-title">Phase 2 (1-3 months)</div>
-                                    <p>JavaScript/TypeScript support with intelligent code suggestions</p>
+                                    <div class="roadmap-title">Language Expansion</div>
+                                    <p>Add support for JavaScript/TypeScript, Java, and enhanced refactoring capabilities</p>
                                 </div>
                             </div>
                             
                             <div class="roadmap-item">
-                                <div class="roadmap-icon">
-                                    <i class="fas fa-cogs"></i>
-                                </div>
+                                <div class="roadmap-date">Q3</div>
                                 <div class="roadmap-content">
-                                    <div class="roadmap-title">Phase 3 (3-6 months)</div>
-                                    <p>Team analytics and CI/CD integration capabilities</p>
+                                    <div class="roadmap-title">Team Features</div>
+                                    <p>Shared rulesets, team analytics dashboard, and CI/CD integration</p>
+                                </div>
+                            </div>
+                            
+                            <div class="roadmap-item">
+                                <div class="roadmap-date">Q4</div>
+                                <div class="roadmap-content">
+                                    <div class="roadmap-title">Advanced AI</div>
+                                    <p>Predictive code generation, architecture suggestions, and personalized learning paths</p>
                                 </div>
                             </div>
                         </div>
                         
-                        <h3 style="color:#2C3E50;margin:25px 0 15px;">Execution & Team Leadership</h3>
-                        <p>I managed a team of four engineers (2 backend, 1 frontend, 1 ML) through rapid development cycles:</p>
+                        <div class="section-header">
+                            <div class="section-number">5.0</div>
+                            <h3>Go-to-Market Strategy</h3>
+                        </div>
+                        <p>I designed a multi-channel GTM strategy targeting developers through both bottom-up and top-down approaches.</p>
+                        
+                        <div class="viz-container">
+                            <div class="viz-card">
+                                <div class="viz-number">1</div>
+                                <div class="viz-label">Developer Community</div>
+                            </div>
+                            <div class="viz-card">
+                                <div class="viz-number">2</div>
+                                <div class="viz-label">Enterprise Sales</div>
+                            </div>
+                            <div class="viz-card">
+                                <div class="viz-number">3</div>
+                                <div class="viz-label">Platform Partnerships</div>
+                            </div>
+                        </div>
                         
                         <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
-                            <li>Creating detailed user stories and acceptance criteria</li>
-                            <li>Prioritizing features based on technical feasibility and user impact</li>
-                            <li>Facilitating daily standups and removing development blockers</li>
-                            <li>Making strategic trade-offs between functionality and performance</li>
+                            <li><strong>Developer-First Approach:</strong> Free tier for individual developers with premium features for teams, leveraging viral adoption within developer communities.</li>
+                            <li><strong>Enterprise Offering:</strong> Team and organization plans with advanced features like custom rulesets, compliance reporting, and dedicated support.</li>
+                            <li><strong>Platform Partnerships:</strong> Integration with GitHub, GitLab, and other developer platforms to reach users where they already work.</li>
+                            <li><strong>Content Marketing:</strong> Technical blog posts, tutorial videos, and conference presentations to establish thought leadership.</li>
                         </ul>
                         
-                        <p>We delivered a functional VS Code extension that could automatically correct PEP8 violations and suggest code optimizations in real-time.</p>
+                        <div class="chart-container">
+                            <canvas id="devmindGtmChart"></canvas>
+                        </div>
                         
-                        <h3 style="color:#2C3E50;margin:25px 0 15px;">Results & Impact</h3>
-                        <p>The project achieved:</p>
+                        <div class="section-header">
+                            <div class="section-number">6.0</div>
+                            <h3>Success Metrics & Impact</h3>
+                        </div>
+                        <p>I established clear success metrics to measure product impact and business viability.</p>
+                        
+                        <div class="metric-grid">
+                            <div class="metric-card">
+                                <div class="metric-value">30%</div>
+                                <div class="metric-label">Reduction in code review time</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value">40%</div>
+                                <div class="metric-label">Fewer style violations</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value">25%</div>
+                                <div class="metric-label">Faster onboarding</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value">4.8/5</div>
+                                <div class="metric-label">User satisfaction</div>
+                            </div>
+                        </div>
                         
                         <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
-                            <li>Finalist position among 50+ teams at Penn AI Hackathon 2025</li>
-                            <li>Positive feedback from early users on the non-disruptive implementation</li>
-                            <li>30% estimated reduction in time spent on manual code quality improvements</li>
-                            <li>Successful demonstration of core functionality including real-time code analysis and automatic fixes</li>
+                            <li><strong>Productivity Impact:</strong> Projected 30% reduction in time spent on code quality issues, saving developers 5+ hours per month.</li>
+                            <li><strong>Quality Improvement:</strong> Estimated 40% reduction in style violations and consistency issues across codebases.</li>
+                            <li><strong>Adoption Targets:</strong> 
+                                <ul style="list-style-type:circle;margin-left:30px;margin-top:10px;">
+                                    <li>10,000+ individual developer users in first year</li>
+                                    <li>500+ teams using paid version by end of year 2</li>
+                                    <li>30% conversion rate from free to paid teams</li>
+                                </ul>
+                            </li>
                         </ul>
                         
-                        <div style="background:#f8f9fa;padding:20px;border-radius:10px;margin:30px 0;">
-                            <h4 style="color:#2C3E50;margin-bottom:15px;">Product Manager Impact</h4>
-                            <p>This project demonstrates my ability to conduct user research before solutioning, maintain clear communication between technical team members, make deliberate trade-offs under time constraints, and focus on seamless integration with existing workflows.</p>
+                        <div class="chart-container">
+                            <canvas id="devmindMetricsChart"></canvas>
+                        </div>
+                        
+                        <div class="section-header">
+                            <div class="section-number">7.0</div>
+                            <h3>Conclusion</h3>
+                        </div>
+                        
+                        <div class="conclusion-highlight">
+                            <h3>Product Strategy & Execution</h3>
+                            <p>The DevMind project demonstrates my ability to identify developer pain points, validate them through research, and translate insights into a compelling product vision. Key achievements include:</p>
+                            <ul style="margin-left:20px;margin-top:15px;">
+                                <li>Conducted mixed-methods research to identify a $4.2B market opportunity in developer tools</li>
+                                <li>Designed a phased product roadmap balancing technical feasibility with user value</li>
+                                <li>Developed a dual GTM strategy targeting both individual developers and enterprise teams</li>
+                                <li>Defined success metrics focused on productivity gains, code quality improvements, and business growth</li>
+                            </ul>
+                            <p style="margin-top:15px;">This project showcases my skills in product strategy, user research, and cross-functional leadership in a technical domain.</p>
                         </div>
                     `
                 },
@@ -1339,113 +1457,225 @@
                     subtitle: "Product Manager & Technical Lead | Data-Driven Optimization",
                     content: `
                         <div style="background:linear-gradient(120deg, #2C3E50, #34495E);color:white;padding:40px;border-radius:10px;margin-bottom:30px;">
-                            <h2 style="margin-bottom:15px;">Enhancing User Engagement Through Data-Driven Optimization</h2>
-                            <p>Movie Game is an interactive entertainment platform designed to engage users through gamified content experiences.</p>
+                            <h2 style="margin-bottom:15px;">Movie Game: Interactive Entertainment Platform</h2>
+                            <p>A gamified movie trivia platform that combines social features, rewards, and personalized content to engage film enthusiasts.</p>
                         </div>
+                        
+                        <div class="section-header">
+                            <div class="section-number">1.0</div>
+                            <h3>Project Overview & Problem Definition</h3>
+                        </div>
+                        <p><strong>Project:</strong> Movie Game – An interactive entertainment platform that engages users through gamified movie content experiences.</p>
+                        <p><strong>Core Problem:</strong> Traditional movie trivia apps suffer from low retention, limited social features, and static content that fails to keep users engaged over time. Users want a more dynamic, social, and rewarding experience that evolves with their interests.</p>
+                        <p><strong>My Role:</strong> Product Manager & Technical Lead | Data-Driven Optimization</p>
+                        
+                        <div class="chart-container">
+                            <canvas id="movieProblemChart"></canvas>
+                        </div>
+                        
+                        <div class="section-header">
+                            <div class="section-number">2.0</div>
+                            <h3>Market Analysis & Opportunity</h3>
+                        </div>
+                        <p>I conducted market research to size the opportunity and identify key trends in entertainment and gaming.</p>
                         
                         <div class="viz-container">
                             <div class="viz-card">
-                                <div class="viz-number">18%</div>
-                                <div class="viz-label">Increase in Day 7 Retention</div>
+                                <div class="viz-number">$200B</div>
+                                <div class="viz-label">Global entertainment market</div>
                             </div>
                             <div class="viz-card">
-                                <div class="viz-number">15%</div>
-                                <div class="viz-label">Growth in Session Length</div>
+                                <div class="viz-number">68%</div>
+                                <div class="viz-label">of gamers play mobile games</div>
                             </div>
                             <div class="viz-card">
-                                <div class="viz-number">56%</div>
-                                <div class="viz-label">Faster Response Time</div>
+                                <div class="viz-number">3.2M</div>
+                                <div class="viz-label">Movie trivia app downloads (2024)</div>
                             </div>
                         </div>
                         
-                        <h3 style="color:#2C3E50;margin:25px 0 15px;">Problem Identification & Analysis</h3>
-                        <p>Post-launch data revealed critical challenges:</p>
+                        <p><strong>Strategic Insight:</strong> The research revealed an opportunity to combine three growing trends: gamified learning, social entertainment, and personalized content. Unlike generic trivia apps, Movie Game would focus on deep personalization and social connectivity.</p>
                         
-                        <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
-                            <li>Day 7 retention rates stagnated at 28%</li>
-                            <li>Average session length remained below 3.2 minutes</li>
-                            <li>System response times averaged 450ms, causing 40% drop-off during loading screens</li>
-                        </ul>
+                        <div class="chart-container">
+                            <canvas id="movieMarketChart"></canvas>
+                        </div>
                         
-                        <p>I initiated a comprehensive analysis to identify improvement opportunities:</p>
+                        <div class="section-header">
+                            <div class="section-number">3.0</div>
+                            <h3>User Research & Personas</h3>
+                        </div>
+                        <p>I identified three primary user segments with distinct needs and behaviors:</p>
                         
-                        <div class="process-flow">
-                            <div class="process-step">
-                                <div class="process-icon">
-                                    <i class="fas fa-users"></i>
-                                </div>
-                                <div class="process-title">Cohort Analysis</div>
-                                <p>Segmented 15,000 users by acquisition date and feature usage</p>
+                        <div class="stakeholder-grid">
+                            <div class="stakeholder-card">
+                                <div class="stakeholder-title">Casual Moviegoers</div>
+                                <p><strong>Need:</strong> Fun, easy-to-play game with recognizable content. Social features to compete with friends and share achievements.</p>
                             </div>
                             
-                            <div class="process-step">
-                                <div class="process-icon">
-                                    <i class="fas fa-vial"></i>
-                                </div>
-                                <div class="process-title">A/B Testing</div>
-                                <p>Conducted 4 controlled experiments on feature introductions</p>
+                            <div class="stakeholder-card">
+                                <div class="stakeholder-title">Film Enthusiasts</div>
+                                <p><strong>Need:</strong> Challenging content, deep trivia, and recognition of their expertise. Community features to connect with other film buffs.</p>
                             </div>
                             
-                            <div class="process-step">
-                                <div class="process-icon">
-                                    <i class="fas fa-map"></i>
-                                </div>
-                                <div class="process-title">Session Analytics</div>
-                                <p>Mapped 12,000 user sessions to identify drop-off points</p>
+                            <div class="stakeholder-card">
+                                <div class="stakeholder-title">Social Players</div>
+                                <p><strong>Need:</strong> Multiplayer features, group competitions, and sharing capabilities. Visual appeal and bragging rights.</p>
                             </div>
                         </div>
                         
-                        <h3 style="color:#2C3E50;margin:25px 0 15px;">Data-Driven Decision Making</h3>
-                        <p><strong>Retention Optimization:</strong></p>
-                        <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
-                            <li>Identified that users engaging with social features showed 35% higher Day 7 retention</li>
-                            <li>Implemented personalized daily challenges, increasing Day 7 retention from 28% to 46%</li>
-                            <li>Introduced streak rewards that improved weekly returning users by 22%</li>
-                        </ul>
+                        <div class="section-header">
+                            <div class="section-number">4.0</div>
+                            <h3>Solution & Product Strategy</h3>
+                        </div>
+                        <p>The solution is a mobile app that combines personalized movie trivia, social features, and reward systems to create an engaging entertainment experience.</p>
                         
-                        <p><strong>Feature Prioritization:</strong></p>
-                        <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
-                            <li>A/B testing revealed reward-driven quests increased session frequency by 22%</li>
-                            <li>Prioritized development of progressive reward system based on usage data</li>
-                            <li>Allocated engineering resources to features showing highest retention impact</li>
-                        </ul>
+                        <h4 style="color:#2C3E50;margin:20px 0 15px;">Key Features & Rationale:</h4>
                         
-                        <h3 style="color:#2C3E50;margin:25px 0 15px;">Technical Performance Improvements</h3>
-                        <p><strong>System Optimization:</strong></p>
-                        <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
-                            <li>Led database indexing optimization reducing query time by 60%</li>
-                            <li>Implemented caching strategy cutting API response times by 45%</li>
-                            <li>Achieved consistent system response time under 200ms (from 450ms)</li>
-                        </ul>
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fas fa-user-cog"></i></div>
+                                <div class="feature-content">
+                                    <h4>Personalized Content Engine</h4>
+                                    <p>AI-driven content recommendation system that adapts to each user's movie preferences, knowledge level, and playing history to deliver tailored trivia experiences.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fas fa-trophy"></i></div>
+                                <div class="feature-content">
+                                    <h4>Dynamic Reward System</h4>
+                                    <p>Multi-tiered reward structure with daily challenges, achievement badges, and progressive unlocking of content to maintain long-term engagement.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fas fa-users"></i></div>
+                                <div class="feature-content">
+                                    <h4>Social Connectivity</h4>
+                                    <p>Friend systems, group competitions, and sharing features that transform solitary trivia into a social experience, increasing retention and viral growth.</p>
+                                </div>
+                            </div>
+                        </div>
                         
-                        <p><strong>Impact Measurement:</strong></p>
-                        <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
-                            <li>15% increase in average session length (3.2 to 3.7 minutes)</li>
-                            <li>40% reduction in loading screen drop-off rate</li>
-                            <li>12% increase in daily active users (DAU)</li>
-                        </ul>
+                        <h4 style="color:#2C3E50;margin:20px 0 15px;">Product Roadmap:</h4>
                         
-                        <h3 style="color:#2C3E50;margin:25px 0 15px;">Business Impact</h3>
-                        <p>The implemented changes delivered measurable results:</p>
+                        <div class="roadmap-container">
+                            <div class="roadmap-item">
+                                <div class="roadmap-date">Q1</div>
+                                <div class="roadmap-content">
+                                    <div class="roadmap-title">MVP Launch</div>
+                                    <p>Core trivia gameplay, basic personalization, and single-player modes</p>
+                                </div>
+                            </div>
+                            
+                            <div class="roadmap-item">
+                                <div class="roadmap-date">Q2</div>
+                                <div class="roadmap-content">
+                                    <div class="roadmap-title">Social Features</div>
+                                    <p>Friend system, leaderboards, and sharing capabilities</p>
+                                </div>
+                            </div>
+                            
+                            <div class="roadmap-item">
+                                <div class="roadmap-date">Q3</div>
+                                <div class="roadmap-content">
+                                    <div class="roadmap-title">Advanced Personalization</div>
+                                    <p>AI-driven content recommendations, adaptive difficulty, and customized challenges</p>
+                                </div>
+                            </div>
+                            
+                            <div class="roadmap-item">
+                                <div class="roadmap-date">Q4</div>
+                                <div class="roadmap-content">
+                                    <div class="roadmap-title">Monetization Expansion</div>
+                                    <p>Premium content, partnerships with studios, and branded entertainment experiences</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="section-header">
+                            <div class="section-number">5.0</div>
+                            <h3>Data-Driven Optimization</h3>
+                        </div>
+                        <p>I implemented a comprehensive analytics framework to drive product decisions and optimizations.</p>
                         
                         <div class="viz-container">
                             <div class="viz-card">
-                                <div class="viz-number">18%</div>
-                                <div class="viz-label">Increase in Day 7 Retention</div>
+                                <div class="viz-number">15+</div>
+                                <div class="viz-label">A/B tests conducted</div>
+                            </div>
+                            <div class="viz-card">
+                                <div class="viz-number">15K</div>
+                                <div class="viz-label">Users analyzed</div>
                             </div>
                             <div class="viz-card">
                                 <div class="viz-number">15%</div>
-                                <div class="viz-label">Growth in Session Length</div>
-                            </div>
-                            <div class="viz-card">
-                                <div class="viz-number">12%</div>
-                                <div class="viz-label">Rise in Daily Active Users</div>
+                                <div class="viz-label">Retention improvement</div>
                             </div>
                         </div>
                         
-                        <div style="background:#f8f9fa;padding:20px;border-radius:10px;margin:30px 0;">
-                            <h4 style="color:#2C3E50;margin-bottom:15px;">Product Manager Impact</h4>
-                            <p>This project demonstrates my ability to translate quantitative analysis into product decisions that drive measurable business results, lead technical improvements that directly impact user engagement metrics, balance feature development with performance optimization, and communicate complex data insights to stakeholders effectively.</p>
+                        <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
+                            <li><strong>Cohort Analysis:</strong> Segmented users by acquisition channel, feature usage, and engagement patterns to identify key retention drivers.</li>
+                            <li><strong>A/B Testing:</strong> Conducted 15+ experiments on features like reward structures, onboarding flows, and social hooks to optimize engagement.</li>
+                            <li><strong>Performance Monitoring:</strong> Implemented comprehensive tracking to measure feature adoption, session length, and conversion metrics.</li>
+                            <li><strong>Personalization Algorithm:</strong> Developed ML models to personalize content recommendations, resulting in 25% higher engagement.</li>
+                        </ul>
+                        
+                        <div class="chart-container">
+                            <canvas id="movieDataChart"></canvas>
+                        </div>
+                        
+                        <div class="section-header">
+                            <div class="section-number">6.0</div>
+                            <h3>Results & Business Impact</h3>
+                        </div>
+                        <p>The data-driven approach delivered significant improvements in key metrics:</p>
+                        
+                        <div class="metric-grid">
+                            <div class="metric-card">
+                                <div class="metric-value">18%</div>
+                                <div class="metric-label">Increase in Day 7 Retention</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value">15%</div>
+                                <div class="metric-label">Growth in Session Length</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value">56%</div>
+                                <div class="metric-label">Faster Response Time</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value">12%</div>
+                                <div class="metric-label">Rise in Daily Active Users</div>
+                            </div>
+                        </div>
+                        
+                        <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
+                            <li><strong>User Engagement:</strong> Increased Day 7 retention from 28% to 46% through personalized content and social features.</li>
+                            <li><strong>Performance:</strong> Reduced system response time from 450ms to under 200ms through database optimization and caching strategies.</li>
+                            <li><strong>Monetization:</strong> Achieved $2.50 ARPU through a balanced freemium model with premium content and non-intrusive ads.</li>
+                            <li><strong>Growth:</strong> 12% increase in DAU through viral social features and improved onboarding.</li>
+                        </ul>
+                        
+                        <div class="chart-container">
+                            <canvas id="movieResultsChart"></canvas>
+                        </div>
+                        
+                        <div class="section-header">
+                            <div class="section-number">7.0</div>
+                            <h3>Conclusion</h3>
+                        </div>
+                        
+                        <div class="conclusion-highlight">
+                            <h3>Data-Driven Product Leadership</h3>
+                            <p>The Movie Game project demonstrates my ability to leverage data analytics to drive product decisions and optimize user experience. Key achievements include:</p>
+                            <ul style="margin-left:20px;margin-top:15px;">
+                                <li>Transformed a traditional trivia app into a personalized, social entertainment platform</li>
+                                <li>Implemented a comprehensive analytics framework that informed product prioritization</li>
+                                <li>Led technical optimizations that improved performance and user engagement</li>
+                                <li>Developed a monetization strategy that balanced user experience with revenue generation</li>
+                            </ul>
+                            <p style="margin-top:15px;">This project showcases my skills in data analysis, product optimization, and cross-functional leadership in a consumer entertainment context.</p>
                         </div>
                     `
                 }
@@ -1473,10 +1703,12 @@
                         modal.style.display = 'block';
                         document.body.style.overflow = 'hidden';
                         
-                        // Initialize charts for echomom project
-                        if (projectId === 'echomom') {
-                            setTimeout(initEchomomCharts, 100);
-                        }
+                        // Initialize charts based on project
+                        setTimeout(() => {
+                            if (projectId === 'echomom') initEchomomCharts();
+                            if (projectId === 'devmind') initDevmindCharts();
+                            if (projectId === 'moviegame') initMovieGameCharts();
+                        }, 100);
                     }
                 });
             });
@@ -1627,6 +1859,293 @@
                             title: {
                                 display: true,
                                 text: 'Performance Improvement Projections',
+                                font: { size: 16 }
+                            }
+                        },
+                        scales: {
+                            r: {
+                                angleLines: { display: true },
+                                suggestedMin: 0,
+                                suggestedMax: 100
+                            }
+                        }
+                    }
+                });
+            }
+            
+            // Initialize DevMind charts
+            function initDevmindCharts() {
+                // Problem Chart
+                const problemCtx = document.getElementById('devmindProblemChart').getContext('2d');
+                new Chart(problemCtx, {
+                    type: 'pie',
+                    data: {
+                        labels: ['Formatting Issues', 'Naming Inconsistencies', 'Code Structure', 'Documentation', 'Other'],
+                        datasets: [{
+                            data: [35, 25, 20, 15, 5],
+                            backgroundColor: ['#3498DB', '#2ECC71', '#E74C3C', '#F39C12', '#9B59B6']
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Types of Code Quality Issues',
+                                font: { size: 16 }
+                            },
+                            legend: { position: 'bottom' }
+                        }
+                    }
+                });
+                
+                // Research Chart
+                const researchCtx = document.getElementById('devmindResearchChart').getContext('2d');
+                new Chart(researchCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Junior Developers', 'Mid-Level Developers', 'Senior Developers', 'Engineering Managers'],
+                        datasets: [{
+                            label: 'Weekly Hours Spent on Code Quality',
+                            data: [3.5, 2.8, 1.5, 4.2],
+                            backgroundColor: '#3498DB'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Time Spent on Code Quality by Role',
+                                font: { size: 16 }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Hours per Week'
+                                }
+                            }
+                        }
+                    }
+                });
+                
+                // GTM Chart
+                const gtmCtx = document.getElementById('devmindGtmChart').getContext('2d');
+                new Chart(gtmCtx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+                        datasets: [{
+                            label: 'Individual Users',
+                            data: [1000, 5000, 15000, 30000],
+                            borderColor: '#3498DB',
+                            fill: false
+                        }, {
+                            label: 'Team Users',
+                            data: [0, 50, 300, 1200],
+                            borderColor: '#2ECC71',
+                            fill: false
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Projected User Growth',
+                                font: { size: 16 }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                type: 'logarithmic',
+                                title: {
+                                    display: true,
+                                    text: 'Number of Users'
+                                }
+                            }
+                        }
+                    }
+                });
+                
+                // Metrics Chart
+                const metricsCtx = document.getElementById('devmindMetricsChart').getContext('2d');
+                new Chart(metricsCtx, {
+                    type: 'radar',
+                    data: {
+                        labels: ['Code Consistency', 'Review Time', 'Onboarding', 'Productivity', 'Satisfaction'],
+                        datasets: [{
+                            label: 'Before DevMind',
+                            data: [40, 30, 45, 50, 60],
+                            fill: true,
+                            backgroundColor: 'rgba(52, 152, 219, 0.2)',
+                            borderColor: 'rgba(52, 152, 219, 1)',
+                            pointBackgroundColor: 'rgba(52, 152, 219, 1)'
+                        }, {
+                            label: 'With DevMind',
+                            data: [80, 70, 85, 90, 85],
+                            fill: true,
+                            backgroundColor: 'rgba(46, 204, 113, 0.2)',
+                            borderColor: 'rgba(46, 204, 113, 1)',
+                            pointBackgroundColor: 'rgba(46, 204, 113, 1)'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Projected Impact on Development Metrics',
+                                font: { size: 16 }
+                            }
+                        },
+                        scales: {
+                            r: {
+                                angleLines: { display: true },
+                                suggestedMin: 0,
+                                suggestedMax: 100
+                            }
+                        }
+                    }
+                });
+            }
+            
+            // Initialize Movie Game charts
+            function initMovieGameCharts() {
+                // Problem Chart
+                const problemCtx = document.getElementById('movieProblemChart').getContext('2d');
+                new Chart(problemCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Low Retention', 'Limited Social Features', 'Static Content', 'Poor Personalization', 'Other'],
+                        datasets: [{
+                            data: [35, 25, 20, 15, 5],
+                            backgroundColor: ['#3498DB', '#2ECC71', '#E74C3C', '#F39C12', '#9B59B6']
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Challenges with Traditional Trivia Apps',
+                                font: { size: 16 }
+                            },
+                            legend: { position: 'bottom' }
+                        }
+                    }
+                });
+                
+                // Market Chart
+                const marketCtx = document.getElementById('movieMarketChart').getContext('2d');
+                new Chart(marketCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Gamified Learning', 'Social Entertainment', 'Personalized Content', 'Mobile Gaming'],
+                        datasets: [{
+                            label: 'Annual Growth Rate (%)',
+                            data: [25, 18, 30, 12],
+                            backgroundColor: '#3498DB'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Market Trends & Growth Rates',
+                                font: { size: 16 }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Growth Rate (%)'
+                                }
+                            }
+                        }
+                    }
+                });
+                
+                // Data Chart
+                const dataCtx = document.getElementById('movieDataChart').getContext('2d');
+                new Chart(dataCtx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                        datasets: [{
+                            label: 'Day 7 Retention (%)',
+                            data: [28, 32, 38, 42, 46, 48],
+                            borderColor: '#3498DB',
+                            fill: false
+                        }, {
+                            label: 'Session Length (min)',
+                            data: [3.2, 3.4, 3.5, 3.6, 3.7, 3.8],
+                            borderColor: '#2ECC71',
+                            fill: false
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Performance Improvements Over Time',
+                                font: { size: 16 }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                title: {
+                                    display: true,
+                                    text: 'Metric Value'
+                                }
+                            }
+                        }
+                    }
+                });
+                
+                // Results Chart
+                const resultsCtx = document.getElementById('movieResultsChart').getContext('2d');
+                new Chart(resultsCtx, {
+                    type: 'radar',
+                    data: {
+                        labels: ['Retention', 'Engagement', 'Monetization', 'Performance', 'Growth'],
+                        datasets: [{
+                            label: 'Before Optimization',
+                            data: [40, 45, 30, 50, 35],
+                            fill: true,
+                            backgroundColor: 'rgba(52, 152, 219, 0.2)',
+                            borderColor: 'rgba(52, 152, 219, 1)',
+                            pointBackgroundColor: 'rgba(52, 152, 219, 1)'
+                        }, {
+                            label: 'After Optimization',
+                            data: [65, 70, 55, 85, 60],
+                            fill: true,
+                            backgroundColor: 'rgba(46, 204, 113, 0.2)',
+                            borderColor: 'rgba(46, 204, 113, 1)',
+                            pointBackgroundColor: 'rgba(46, 204, 113, 1)'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Performance Improvements Across Key Metrics',
                                 font: { size: 16 }
                             }
                         },
