@@ -127,16 +127,31 @@
         }
         
         .hero h1 {
-            font-size: 3.2rem;
+            font-size: 3.5rem;
             font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.1;
+        }
+        
+        .hero h2 {
+            font-size: 1.8rem;
+            font-weight: 500;
             margin-bottom: 20px;
-            line-height: 1.2;
+            opacity: 0.95;
+            line-height: 1.3;
         }
         
         .hero p {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             margin-bottom: 30px;
             opacity: 0.9;
+            line-height: 1.5;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
         }
         
         .btn {
@@ -343,6 +358,44 @@
             gap: 20px;
         }
         
+        .value-props {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .value-prop {
+            background: var(--light);
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .value-prop:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .value-prop i {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+        
+        .value-prop h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .value-prop p {
+            color: var(--secondary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
         .btn-outline {
             background: transparent;
             border: 2px solid var(--primary);
@@ -352,6 +405,113 @@
         .btn-outline:hover {
             background: var(--primary);
             color: white;
+        }
+        
+        /* Advantages Section */
+        .advantages {
+            padding: 100px 0;
+            background: var(--light);
+        }
+        
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .advantage-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            border: 1px solid #eee;
+        }
+        
+        .advantage-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+        
+        .advantage-icon {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+        
+        .advantage-card h3 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .advantage-card p {
+            color: var(--secondary);
+            line-height: 1.6;
+        }
+        
+        /* Product Thinking Section */
+        .product-thinking {
+            padding: 100px 0;
+            background: white;
+        }
+        
+        .thinking-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+        }
+        
+        .thinking-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            border: 1px solid #eee;
+        }
+        
+        .thinking-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+        
+        .thinking-preview {
+            padding: 30px;
+        }
+        
+        .thinking-preview h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .thinking-preview p {
+            color: var(--secondary);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .thinking-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .tag {
+            background: var(--light);
+            color: var(--primary);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .thinking-card .btn {
+            margin: 0 30px 30px;
+            width: calc(100% - 60px);
         }
         
         /* Footer */
@@ -640,6 +800,22 @@
                 width: 250px;
                 height: 250px;
             }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .advantages-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .thinking-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .value-props {
+                grid-template-columns: 1fr;
+            }
         }
         
         @media (max-width: 768px) {
@@ -678,9 +854,10 @@
                 <div class="logo">Catherine<span>Wang</span></div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#projects">Work</a></li>
+                    <li><a href="#product-thinking">Product Thinking</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact">Connect</a></li>
                 </ul>
             </nav>
         </div>
@@ -691,12 +868,88 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Product Manager &<br>Data-Driven Strategist</h1>
-                    <p>MSCIT @ University of Pennsylvania | Finance BS @ Miami University<br>Bridging technical execution with business strategy</p>
-                    <a href="#projects" class="btn">View My Work</a>
+                    <h1>Catherine Wang</h1>
+                    <h2>Driving Product Decisions with Financial Insights & Technical Vision</h2>
+                    <p>UPenn CS Master's | Former Financial Analyst | AI Product Practitioner<br>Bridging financial acumen, technical expertise, and data-driven decision making</p>
+                    <div class="hero-buttons">
+                        <a href="#product-thinking" class="btn">View Product Analysis →</a>
+                        <a href="#resume" class="btn btn-outline">Download Resume ↓</a>
+                    </div>
                 </div>
                 <div class="hero-image">
                     <img src="https://www.dropbox.com/scl/fi/boeojkbnyoimqfdzyplgq/IMG_6414.jpg?rlkey=rddxsszg9fydk1zci1kqs4ka4&st=ieb6nvw7&raw=1" alt="Catherine Wang - Product Manager">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Advantages Section -->
+    <section class="advantages" id="advantages">
+        <div class="container">
+            <div class="section-title">
+                <h2>Core Advantages</h2>
+            </div>
+            
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Cross-Domain Integration</h3>
+                    <p>Financial background + Technical skills + Data analysis = Unique product perspective</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Battle-Tested Experience</h3>
+                    <p>AI Hackathon finalist - 48-hour MVP delivery, $2.8B market opportunity identification</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Data-Driven Decision Making</h3>
+                    <p>$1.6B financial institution - Data-driven fraud detection system implementation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Thinking Section -->
+    <section class="product-thinking" id="product-thinking">
+        <div class="container">
+            <div class="section-title">
+                <h2>Product Thinking Showcase</h2>
+            </div>
+            
+            <div class="thinking-grid">
+                <div class="thinking-card">
+                    <div class="thinking-preview">
+                        <h3>Jira Deep Dive Analysis</h3>
+                        <p>Through intelligent Sprint capacity prediction, help agile teams improve delivery efficiency by 15%</p>
+                        <div class="thinking-tags">
+                            <span class="tag">Product Analysis</span>
+                            <span class="tag">Agile</span>
+                            <span class="tag">User Research</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn view-thinking" data-thinking="jira">View Analysis →</a>
+                </div>
+                
+                <div class="thinking-card">
+                    <div class="thinking-preview">
+                        <h3>SaaS Activation Funnel Optimization</h3>
+                        <p>Systematic diagnosis of SaaS activation funnel, design A/B tests to validate optimization hypotheses</p>
+                        <div class="thinking-tags">
+                            <span class="tag">Data Analysis</span>
+                            <span class="tag">A/B Testing</span>
+                            <span class="tag">Growth</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn view-thinking" data-thinking="funnel">View Case Study →</a>
                 </div>
             </div>
         </div>
@@ -706,61 +959,61 @@
     <section class="projects" id="projects">
         <div class="container">
             <div class="section-title">
-                <h2>Product Management Work Samples</h2>
+                <h2>Featured Projects</h2>
             </div>
             
             <div class="project-grid">
-                <!-- EchoMom Project -->
+                <!-- FinTrack Campus Project -->
                 <div class="project-card">
                     <div class="project-img">
-                        <div class="project-tag">Healthcare Tech</div>
-                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="EchoMom AI Screening Project">
+                        <div class="project-tag">FinTech</div>
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1511&q=80" alt="FinTrack Campus Project">
                     </div>
                     <div class="project-content">
-                        <h3>EchoMom AI Screening</h3>
-                        <p>AI-powered postpartum depression screening tool with comprehensive GTM strategy for healthcare providers.</p>
+                        <h3>FinTrack Campus</h3>
+                        <p>Smart financial assistant for college students, combining expense tracking with financial education through gamification.</p>
                         <div class="project-skills">
                             <span class="skill-tag">Product Strategy</span>
-                            <span class="skill-tag">GTM Planning</span>
-                            <span class="skill-tag">Market Analysis</span>
+                            <span class="skill-tag">User Research</span>
+                            <span class="skill-tag">MVP Development</span>
                         </div>
-                        <a href="#" class="btn view-project" data-project="echomom">View Work Sample</a>
+                        <a href="#" class="btn view-project" data-project="fintrack">View Project →</a>
                     </div>
                 </div>
                 
-                <!-- DevMind Project -->
+                <!-- DevMind AI Hackathon Project -->
                 <div class="project-card">
                     <div class="project-img">
-                        <div class="project-tag">Developer Tools</div>
+                        <div class="project-tag">AI Hackathon Finalist</div>
                         <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80" alt="DevMind AI Tool Project">
                     </div>
                     <div class="project-content">
-                        <h3>DevMind AI Tool</h3>
-                        <p>AI-powered developer tool enhancing code quality and consistency, validated through extensive user research.</p>
+                        <h3>DevMind - AI Hackathon</h3>
+                        <p>Developer tool intelligent enhancer - validated product-market fit in 48 hours, reaching hackathon finals.</p>
                         <div class="project-skills">
+                            <span class="skill-tag">48h MVP</span>
                             <span class="skill-tag">User Research</span>
-                            <span class="skill-tag">Roadmapping</span>
-                            <span class="skill-tag">MVP Development</span>
+                            <span class="skill-tag">Product Validation</span>
                         </div>
-                        <a href="#" class="btn view-project" data-project="devmind">View Work Sample</a>
+                        <a href="#" class="btn view-project" data-project="devmind">View Project →</a>
                     </div>
                 </div>
                 
-                <!-- Movie Game Project -->
+                <!-- EchoMom Health Tech Project -->
                 <div class="project-card">
                     <div class="project-img">
-                        <div class="project-tag">Entertainment</div>
-                        <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1575&q=80" alt="Movie Game Platform Project">
+                        <div class="project-tag">Health Tech</div>
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="EchoMom AI Screening Project">
                     </div>
                     <div class="project-content">
-                        <h3>Movie Game Platform</h3>
-                        <p>Interactive entertainment platform optimized through data analysis, A/B testing, and performance enhancements.</p>
+                        <h3>EchoMom Health Tech</h3>
+                        <p>AI-driven postpartum depression screening - $2.8B market opportunity product strategy design.</p>
                         <div class="project-skills">
-                            <span class="skill-tag">Data Analysis</span>
-                            <span class="skill-tag">A/B Testing</span>
-                            <span class="skill-tag">Optimization</span>
+                            <span class="skill-tag">Market Analysis</span>
+                            <span class="skill-tag">Product Strategy</span>
+                            <span class="skill-tag">GTM Planning</span>
                         </div>
-                        <a href="#" class="btn view-project" data-project="moviegame">View Work Sample</a>
+                        <a href="#" class="btn view-project" data-project="echomom">View Project →</a>
                     </div>
                 </div>
             </div>
@@ -776,10 +1029,12 @@
             
             <div class="about-content">
                 <div class="about-text">
-                    <h2>Product Manager with Technical & Business Expertise</h2>
-                    <p>I'm a Computer Science Master's candidate at UPenn with a Finance background from Miami University. My unique combination of technical expertise and business acumen allows me to bridge the gap between engineering teams and business objectives.</p>
-                    <p>I specialize in data-driven product strategy, user research, and go-to-market planning for technology products. My approach combines analytical rigor with creative problem-solving to deliver products that users love and that drive business growth.</p>
-                    <p>I'm seeking Product Manager opportunities where I can leverage my skills to build products that solve real problems for users and create value for businesses.</p>
+                    <h2>From Financial Analysis to AI Product Strategy</h2>
+                    <p>From analyzing anomalous patterns in financial data to building AI-driven health screening tools, my career path may seem to jump around, but there's a clear internal logic—I've always been searching for ways to use data and technology to solve real business problems.</p>
+                    <p>My product thinking germinated at Kemba Credit Union as an accountant. When I designed a fraud detection system for this $1.6B financial institution, I realized the most valuable work wasn't simply executing analysis, but understanding business pain points, identifying data opportunities, and translating technical solutions into measurable business value. That project automating manual processes and saving 30% labor costs across 20+ branches gave me my first taste of "product thinking" magic.</p>
+                    <p>The real turning point came at Penn's AI Hackathon. As product manager for the DevMind project, I had 48 hours to transform a vague technical concept into a product solving real pain points for 100+ developers. I gained deep understanding of the complete product development process from user research, requirement definition, technical feasibility assessment to MVP delivery. When our team stood out among 50+ teams to become finalists, I was certain I'd found my true passion.</p>
+                    <p>My unique advantage lies in the convergence of three backgrounds: financial education gave me rigorous business thinking and risk assessment capabilities; computer science master's training allows me to engage in deep technical discussions with engineers and accurately assess development complexity; while my accounting data analysis experience gives me natural sensitivity to data-driven decision making. In the EchoMom project, I was able to quickly identify a $2.8B market opportunity and design a go-to-market strategy targeting 15,000+ OB/GYNs—this is the embodiment of cross-domain integration capabilities.</p>
+                    <p>I'm seeking a product team that values data insights, technological innovation, and business impact. I hope to transform my experience accumulated in financial risk control, AI applications, and agile development into excellent products that help users solve real problems. I believe the best product managers need not only empathy and business acumen, but also the ability to translate complex technology into user value—and this is exactly where I'm most confident I can contribute.</p>
                 </div>
                 
                 <div class="skills-grid">
@@ -835,15 +1090,52 @@
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-title">
-                <h2>Get In Touch</h2>
+                <h2>Let's Build Better Product Experiences Together</h2>
             </div>
             
             <div class="contact-content">
-                <p>I'm actively exploring Product Manager opportunities for 2026. Feel free to reach out if you'd like to discuss how I can contribute to your team!</p>
-                <div class="contact-buttons">
-                    <a href="mailto:catherinewang1711@gmail.com" class="btn">Email Me</a>
-                    <a href="https://www.linkedin.com/in/catherine-wang-306a60193/" class="btn btn-outline">LinkedIn</a>
+                <p>This website itself embodies my product thinking—I treat it as a continuously iterating product, constantly optimizing based on visitor feedback and data insights. Just like when I analyze Jira or design FinTrack Campus, I'm always thinking: how can I better solve real user needs?</p>
+                
+                <h3 style="color: var(--primary); margin: 30px 0 20px;">What I Can Bring to Your Product Team:</h3>
+                
+                <div class="value-props">
+                    <div class="value-prop">
+                        <i class="fas fa-calculator"></i>
+                        <h4>Data-Driven Business Intuition</h4>
+                        <p>Financial background gives me natural risk assessment and ROI analysis capabilities, enabling balanced product decisions between user value and business objectives</p>
+                    </div>
+                    
+                    <div class="value-prop">
+                        <i class="fas fa-code"></i>
+                        <h4>Accurate Technical Feasibility Assessment</h4>
+                        <p>Computer science training allows deep communication with engineering teams and accurate assessment of development complexity and technical debt</p>
+                    </div>
+                    
+                    <div class="value-prop">
+                        <i class="fas fa-flask"></i>
+                        <h4>Hypothesis-Driven Experiment Design</h4>
+                        <p>From A/B testing to user research, I excel at transforming vague product problems into verifiable specific hypotheses</p>
+                    </div>
+                    
+                    <div class="value-prop">
+                        <i class="fas fa-rocket"></i>
+                        <h4>0-to-1 Product Building Experience</h4>
+                        <p>Hackathon projects gave me experience with complete product development cycles, from user research to MVP delivery</p>
+                    </div>
                 </div>
+                
+                <h3 style="color: var(--primary); margin: 30px 0 20px;">I'm Looking For...</h3>
+                <p>A product team that values data insights, encourages cross-functional collaboration, and is user-value oriented. Whether B2B SaaS, fintech, or AI applications, I'm eager to transform my diverse background into product value that solves real user problems.</p>
+                
+                <h3 style="color: var(--primary); margin: 30px 0 20px;">Let's Start a Conversation</h3>
+                <p>If you think my experience and thinking style can bring new perspectives to your products, or if you'd like to share insights and experiences about product management, I'm very excited to connect:</p>
+                
+                <div class="contact-buttons">
+                    <a href="mailto:catherinewang1711@gmail.com" class="btn">📧 Email Me</a>
+                    <a href="https://www.linkedin.com/in/catherine-wang-306a60193/" class="btn btn-outline">💼 LinkedIn</a>
+                </div>
+                
+                <p style="margin-top: 30px; font-style: italic; color: var(--secondary);">P.S. If you have different views on any of my analyses, or spot blind spots in my thinking, please don't hesitate to tell me! The best product managers grow through continuous feedback and learning, and I hope to be one of them.</p>
             </div>
         </div>
     </section>
