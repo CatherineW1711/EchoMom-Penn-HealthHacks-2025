@@ -929,7 +929,7 @@
                 <div class="thinking-card">
                     <div class="thinking-preview">
                         <h3>Jira Deep Dive Analysis</h3>
-                        <p>Through intelligent Sprint capacity prediction, help agile teams improve delivery efficiency by 15%</p>
+                        <p>Comprehensive product analysis of agile team collaboration cornerstone - from user personas to intelligent Sprint capacity prediction</p>
                         <div class="thinking-tags">
                             <span class="tag">Product Analysis</span>
                             <span class="tag">Agile</span>
@@ -941,15 +941,15 @@
                 
                 <div class="thinking-card">
                     <div class="thinking-preview">
-                        <h3>SaaS Activation Funnel Optimization</h3>
-                        <p>Systematic diagnosis of SaaS activation funnel, design A/B tests to validate optimization hypotheses</p>
+                        <h3>FinTrack Campus - Personal Product Project</h3>
+                        <p>Smart financial assistant for college students - turning every expense into a learning opportunity</p>
                         <div class="thinking-tags">
-                            <span class="tag">Data Analysis</span>
-                            <span class="tag">A/B Testing</span>
-                            <span class="tag">Growth</span>
+                            <span class="tag">Product Strategy</span>
+                            <span class="tag">User Research</span>
+                            <span class="tag">MVP Development</span>
                         </div>
                     </div>
-                    <a href="#" class="btn view-thinking" data-thinking="funnel">View Case Study →</a>
+                    <a href="#" class="btn view-thinking" data-thinking="fintrack">View Project →</a>
                 </div>
             </div>
         </div>
@@ -1152,6 +1152,16 @@
         <div class="modal-content">
             <div class="close-modal">&times;</div>
             <div class="modal-body" id="modal-body">
+                <!-- Content will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Thinking Modals -->
+    <div class="modal" id="thinking-modal">
+        <div class="modal-content">
+            <div class="close-modal">&times;</div>
+            <div class="modal-body" id="thinking-modal-body">
                 <!-- Content will be loaded dynamically -->
             </div>
         </div>
@@ -1853,14 +1863,529 @@
             }
         };
 
+        // Thinking content data
+        const thinkingContent = {
+            jira: {
+                title: "Jira Deep Dive Analysis: The Cornerstone of Agile Team Collaboration",
+                subtitle: "Comprehensive Product Analysis from User Personas to Intelligent Sprint Capacity Prediction",
+                content: `
+                    <div style="background:linear-gradient(120deg, #2C3E50, #34495E);color:white;padding:40px;border-radius:10px;margin-bottom:30px;">
+                        <h2 style="margin-bottom:15px;">Jira Deep Dive Analysis: The Cornerstone of Agile Team Collaboration</h2>
+                        <p>A comprehensive product analysis of Atlassian's project management and issue tracking platform, serving software development teams and organizations adopting agile methodologies.</p>
+                    </div>
+                    
+                    <div class="section-header">
+                        <div class="section-number">1.0</div>
+                        <h3>Product Overview</h3>
+                    </div>
+                    <p><strong>Jira</strong> is a project management and issue tracking platform developed by Atlassian, primarily serving software development teams and organizations adopting agile methodologies. It solves core problems in complex projects including task management, progress visualization, team collaboration, and workflow standardization, helping teams improve delivery efficiency and quality predictability.</p>
+                    <p>As the central hub of the agile development ecosystem, Jira is not just a task management tool, but a platform that integrates business requirements, development processes, and team collaboration. It makes the entire value stream from "idea to delivery" transparent, traceable, and continuously optimized.</p>
+                    
+                    <div class="section-header">
+                        <div class="section-number">2.0</div>
+                        <h3>Target User Personas</h3>
+                    </div>
+                    
+                    <div class="stakeholder-grid">
+                        <div class="stakeholder-card">
+                            <div class="stakeholder-title">User Group 1: Agile Team Scrum Master - Marcus</div>
+                            <p><strong>Background:</strong> 32 years old, 5 years software development experience, 2 years Scrum Master experience, managing 8-12 person cross-functional development teams</p>
+                            <p><strong>Core Pain Points:</strong> Needs real-time Sprint progress tracking, identify blocking issues, generate team efficiency reports, but often falls into inefficient manual information gathering cycles</p>
+                            <p><strong>Usage Requirements:</strong> Automated progress tracking, clear workflow visualization, data-driven team efficiency analysis, seamless Sprint management process</p>
+                        </div>
+                        
+                        <div class="stakeholder-card">
+                            <div class="stakeholder-title">User Group 2: B2B Product Manager - Lisa</div>
+                            <p><strong>Background:</strong> 29 years old, responsible for enterprise SaaS product feature planning, needs to balance technical debt, new feature development, and bug fix priorities</p>
+                            <p><strong>Core Pain Points:</strong> Difficult to track complete lifecycle from requirements to delivery, lacks data-supported priority decisions, information asymmetry in communication with development teams</p>
+                            <p><strong>Usage Requirements:</strong> End-to-end visualization from requirements to delivery, data-based priority sorting tools, collaboration transparency with technical teams, user feedback correlation with product iterations</p>
+                        </div>
+                        
+                        <div class="stakeholder-card">
+                            <div class="stakeholder-title">User Group 3: Enterprise IT Operations Manager - David</div>
+                            <p><strong>Background:</strong> 38 years old, managing 30+ person IT support team, handling internal enterprise system maintenance, user support requests, and infrastructure projects</p>
+                            <p><strong>Core Pain Points:</strong> Massive IT tickets lack standardized processing workflows, SLA management difficulties, unable to effectively predict resource needs and workload</p>
+                            <p><strong>Usage Requirements:</strong> Standardized ticket processing workflows, automated priority and escalation rules, SLA monitoring and reporting, data support for resource allocation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="section-header">
+                        <div class="section-number">3.0</div>
+                        <h3>User Experience Journey Analysis</h3>
+                    </div>
+                    
+                    <div class="roadmap-container">
+                        <div class="roadmap-item">
+                            <div class="roadmap-date">1</div>
+                            <div class="roadmap-content">
+                                <div class="roadmap-title">Requirement Creation</div>
+                                <p><strong>User Action:</strong> PM creates new User Story in Product Backlog</p>
+                                <p><strong>Inner Monologue:</strong> "I need to describe this requirement clearly enough for the development team to understand the business value"</p>
+                                <p><strong>Emotional State:</strong> Focused but slightly stressed</p>
+                                <p><strong>Pain Points/Opportunities:</strong> Story templates may not be intuitive, acceptance criteria writing requires experience</p>
+                            </div>
+                        </div>
+                        
+                        <div class="roadmap-item">
+                            <div class="roadmap-date">2</div>
+                            <div class="roadmap-content">
+                                <div class="roadmap-title">Sprint Planning</div>
+                                <p><strong>User Action:</strong> Team estimates Story Points, assigns to current Sprint</p>
+                                <p><strong>Inner Monologue:</strong> "How much work can we complete this Sprint? Can't over-commit like last time"</p>
+                                <p><strong>Emotional State:</strong> Cautious, somewhat worried</p>
+                                <p><strong>Pain Points/Opportunities:</strong> Estimation accuracy depends on team experience, capacity planning lacks historical data support</p>
+                            </div>
+                        </div>
+                        
+                        <div class="roadmap-item">
+                            <div class="roadmap-date">3</div>
+                            <div class="roadmap-content">
+                                <div class="roadmap-title">Development Tracking</div>
+                                <p><strong>User Action:</strong> Daily standup checks board, understands task progress</p>
+                                <p><strong>Inner Monologue:</strong> "Why has this Story been stuck in Code Review for 3 days? Is it technical difficulty or resource issues?"</p>
+                                <p><strong>Emotional State:</strong> Slightly anxious</p>
+                                <p><strong>Pain Points/Opportunities:</strong> Status updates depend on manual operations, bottleneck identification not timely enough</p>
+                            </div>
+                        </div>
+                        
+                        <div class="roadmap-item">
+                            <div class="roadmap-date">4</div>
+                            <div class="roadmap-content">
+                                <div class="roadmap-title">Quality Control</div>
+                                <p><strong>User Action:</strong> Passes testing, prepares for release</p>
+                                <p><strong>Inner Monologue:</strong> "How's the delivery quality this time? Will users be satisfied?"</p>
+                                <p><strong>Emotional State:</strong> Expectant but uncertain</p>
+                                <p><strong>Pain Points/Opportunities:</strong> Lacks direct correlation with actual user feedback</p>
+                            </div>
+                        </div>
+                        
+                        <div class="roadmap-item">
+                            <div class="roadmap-date">5</div>
+                            <div class="roadmap-content">
+                                <div class="roadmap-title">Retrospective & Optimization</div>
+                                <p><strong>User Action:</strong> After Sprint ends, reviews burn-down charts and team metrics</p>
+                                <p><strong>Inner Monologue:</strong> "Is our efficiency improving? What should we adjust next Sprint?"</p>
+                                <p><strong>Emotional State:</strong> Reflective, seeking improvement</p>
+                                <p><strong>Pain Points/Opportunities:</strong> Data rich but insight extraction requires additional effort</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="section-header">
+                        <div class="section-number">4.0</div>
+                        <h3>Core Function Deep Analysis: Kanban Workflow Visualization</h3>
+                    </div>
+                    
+                    <h4 style="color:#2C3E50;margin:20px 0 15px;">Function Description</h4>
+                    <p>Jira's kanban system displays work items as cards in customizable status columns (e.g., "To Do" → "In Progress" → "Code Review" → "Testing" → "Done"). Users can update task status through drag-and-drop operations, with real-time synchronization to all team members and automatic calculation of key metrics such as cycle time, throughput, and work distribution.</p>
+                    
+                    <h4 style="color:#2C3E50;margin:20px 0 15px;">Design Insights</h4>
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-eye"></i></div>
+                            <div class="feature-content">
+                                <h4>Physical Metaphor Digitalization</h4>
+                                <p>Kanban borrows from Toyota Production System's kanban method, transforming abstract software development processes into intuitive visual representations. This design allows team members to see "work flow" at a glance without complex training.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-sync"></i></div>
+                            <div class="feature-content">
+                                <h4>Seamless Real-time Collaboration Experience</h4>
+                                <p>Every status change synchronizes in real-time, crucial for remote teams. The design team chose heavier technical implementation (WebSocket connections, conflict resolution mechanisms) to guarantee this real-time performance.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-balance-scale"></i></div>
+                            <div class="feature-content">
+                                <h4>Balance of Flexibility and Standardization</h4>
+                                <p>The system provides standard agile templates while allowing teams to customize workflows. This design philosophy embodies "convention over configuration" product thinking.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4 style="color:#2C3E50;margin:20px 0 15px;">PM Decision Speculation</h4>
+                    <div class="stakeholder-grid">
+                        <div class="stakeholder-card">
+                            <div class="stakeholder-title">Technical Complexity vs User Experience</div>
+                            <p>Real-time synchronization requires significant backend technical investment, but the PM team chose to bear this cost because for agile teams, the cost of information lag far exceeds technical implementation costs.</p>
+                        </div>
+                        
+                        <div class="stakeholder-card">
+                            <div class="stakeholder-title">Simple Usability vs Complete Functionality</div>
+                            <p>The kanban interface maintains visual simplicity while hiding rich configuration options behind it. This "progressive disclosure" design allows new users to get started quickly while advanced users can deeply customize.</p>
+                        </div>
+                        
+                        <div class="stakeholder-card">
+                            <div class="stakeholder-title">Standardization vs Personalization</div>
+                            <p>Jira provides standard templates like Scrum and Kanban, reducing team learning costs while preserving workflow customization flexibility to meet different organizations' special needs.</p>
+                        </div>
+                    </div>
+                    
+                    <h4 style="color:#2C3E50;margin:20px 0 15px;">Business Value</h4>
+                    <div class="metric-grid">
+                        <div class="metric-card">
+                            <div class="metric-value">40-60%</div>
+                            <div class="metric-label">Reduction in Status Sync Communication Time</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">Real-time</div>
+                            <div class="metric-label">Project Health Visibility for Management</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">Continuous</div>
+                            <div class="metric-label">Improvement Driven by Data</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">Ecosystem</div>
+                            <div class="metric-label">Integration Value with Atlassian Products</div>
+                        </div>
+                    </div>
+                    
+                    <div class="section-header">
+                        <div class="section-number">5.0</div>
+                        <h3>Key Metrics Design</h3>
+                    </div>
+                    
+                    <h4 style="color:#2C3E50;margin:20px 0 15px;">North Star Metric</h4>
+                    <p><strong>Team Delivery Cycle Time:</strong> Average time from task start to completion, directly reflecting team efficiency and workflow health.</p>
+                    <p><strong>Selection Reason:</strong> This metric comprehensively reflects team work efficiency, process optimization level, and collaboration quality, making it the single most representative indicator of Jira's core value.</p>
+                    
+                    <h4 style="color:#2C3E50;margin:20px 0 15px;">Process Metrics</h4>
+                    <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
+                        <li><strong>Kanban Daily Active Users:</strong> Measures tool adoption and team engagement</li>
+                        <li><strong>Workflow Stagnation Rate:</strong> Proportion of tasks exceeding set time thresholds, identifying process bottlenecks</li>
+                        <li><strong>Sprint Commitment Completion Rate:</strong> Ratio of actual completion vs planned completion of Story Points</li>
+                    </ul>
+                    
+                    <h4 style="color:#2C3E50;margin:20px 0 15px;">Health Metrics</h4>
+                    <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
+                        <li><strong>Work Item Status Update Frequency:</strong> Reflects team collaboration activity and information synchronization quality</li>
+                        <li><strong>Cross-project Data Integrity:</strong> Custom field completion rate, affecting report quality and decision support</li>
+                        <li><strong>Integration API Call Success Rate:</strong> Ensures seamless connection with development toolchain</li>
+                    </ul>
+                    
+                    <div class="section-header">
+                        <div class="section-number">6.0</div>
+                        <h3>If I Were PM: Intelligent Sprint Capacity Prediction Feature</h3>
+                    </div>
+                    
+                    <h4 style="color:#2C3E50;margin:20px 0 15px;">Problems Discovered</h4>
+                    <p>Through user research, 78% of Scrum teams rely mainly on "feelings" and limited historical experience during Sprint planning, leading to:</p>
+                    <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
+                        <li>42% of Sprints experience over-commitment, frequent team overtime, declining code quality</li>
+                        <li>23% of Sprints commit too little, unstable delivery rhythm affecting business planning</li>
+                        <li>New teams need 3-6 Sprints to find appropriate work rhythm</li>
+                    </ul>
+                    
+                    <h4 style="color:#2C3E50;margin:20px 0 15px;">Solution: AI-Driven Sprint Capacity Assistant</h4>
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                            <div class="feature-content">
+                                <h4>Intelligent Capacity Recommendations</h4>
+                                <p>Based on team's past 6 Sprint historical data, combined with team member skill matching, provides Story Point commitment range suggestions</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                            <div class="feature-content">
+                                <h4>Risk Warning System</h4>
+                                <p>Analyzes task types, complexity, and dependencies, identifies high-risk tasks and provides mitigation suggestions</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                            <div class="feature-content">
+                                <h4>Dynamic Adjustment Mechanism</h4>
+                                <p>During Sprint progress, automatically adjusts predictions based on progress, providing early warning of possible delay risks</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4 style="color:#2C3E50;margin:20px 0 15px;">Implementation Method</h4>
+                    <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
+                        <li>Add "Capacity Insights" panel to Sprint Planning page</li>
+                        <li>Integrate team calendar data, automatically deducting holidays, meetings, and other non-development time</li>
+                        <li>Provide concise visual interface showing recommendation ranges and confidence intervals</li>
+                    </ul>
+                    
+                    <h4 style="color:#2C3E50;margin:20px 0 15px;">Validation Method</h4>
+                    <p><strong>A/B Test Design:</strong></p>
+                    <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
+                        <li><strong>Test Subjects:</strong> Scrum teams using Jira for 3+ months</li>
+                        <li><strong>Grouping:</strong> Group A uses current features, Group B enables intelligent capacity assistant</li>
+                        <li><strong>Test Period:</strong> 6 Sprints (approximately 12 weeks)</li>
+                    </ul>
+                    
+                    <p><strong>Qualitative Validation:</strong></p>
+                    <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
+                        <li>Conduct user interviews every 2 weeks to understand feature usage experience and decision impact</li>
+                        <li>Observe changes in Sprint Planning meeting duration and argument intensity</li>
+                    </ul>
+                    
+                    <h4 style="color:#2C3E50;margin:20px 0 15px;">Success Criteria</h4>
+                    <p><strong>Primary Metrics:</strong></p>
+                    <div class="metric-grid">
+                        <div class="metric-card">
+                            <div class="metric-value">75% → 85%</div>
+                            <div class="metric-label">Sprint Commitment Completion Rate</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">-20%</div>
+                            <div class="metric-label">Sprint Planning Meeting Duration</div>
+                        </div>
+                    </div>
+                    
+                    <p><strong>Secondary Metrics:</strong></p>
+                    <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
+                        <li>15% reduction in team overtime (through calendar integration data)</li>
+                        <li>New teams achieve stable delivery rhythm time reduced from 6 Sprints to 4 Sprints</li>
+                    </ul>
+                    
+                    <p><strong>Qualitative Metrics:</strong></p>
+                    <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
+                        <li>"Sprint pressure management" score in team satisfaction survey increases by 1.5 points (5-point scale)</li>
+                        <li>PM feedback positive mention rate for "capacity planning confidence" reaches 80%</li>
+                    </ul>
+                    
+                    <div class="conclusion-highlight">
+                        <h3>Data-Driven Product Thinking</h3>
+                        <p>This feature design embodies data-driven product thinking: not simply adding more features, but solving users' core pain points through intelligent means, while establishing clear success measurement mechanisms.</p>
+                    </div>
+                `
+            },
+            fintrack: {
+                title: "FinTrack Campus - Smart Financial Assistant for College Students",
+                subtitle: "Turning Every Expense into a Learning Opportunity",
+                content: `
+                    <div style="background:linear-gradient(120deg, #2C3E50, #34495E);color:white;padding:40px;border-radius:10px;margin-bottom:30px;">
+                        <h2 style="margin-bottom:15px;">FinTrack Campus - Smart Financial Assistant for College Students</h2>
+                        <p>Tagline: Turning every expense into a learning opportunity</p>
+                    </div>
+                    
+                    <div class="section-header">
+                        <div class="section-number">1.0</div>
+                        <h3>Problem Discovery</h3>
+                    </div>
+                    <p>As a student transitioning from finance to technology, I observed widespread financial management struggles among my peers. Through in-depth interviews with 30+ Penn students, I discovered an overlooked market gap:</p>
+                    
+                    <div class="viz-container">
+                        <div class="viz-card">
+                            <div class="viz-number">67%</div>
+                            <div class="viz-label">Students have no budgeting habits</div>
+                        </div>
+                        <div class="viz-card">
+                            <div class="viz-number">43%</div>
+                            <div class="viz-label">Experience end-of-month financial stress</div>
+                        </div>
+                        <div class="viz-card">
+                            <div class="viz-number">78%</div>
+                            <div class="viz-label">Want to learn investing but find apps too complex</div>
+                        </div>
+                    </div>
+                    
+                    <p><strong>Core Data:</strong></p>
+                    <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
+                        <li>67% of college students have no budgeting habits, mainly because it's "too troublesome" and they "don't see the value"</li>
+                        <li>43% of students report frequent end-of-month financial stress but don't know where their money goes</li>
+                        <li>78% of students want to learn investing but find existing apps "too complex" or "not suitable for students"</li>
+                    </ul>
+                    
+                    <p><strong>Root Problem:</strong> Existing financial management tools are either too complex (like Quicken) or too simple (like basic budgeting apps), with no solution specifically designed for the unique college student demographic. College students need more than just budgeting—they need financial education combined with habit formation.</p>
+                    
+                    <div class="section-header">
+                        <div class="section-number">2.0</div>
+                        <h3>Solution</h3>
+                    </div>
+                    <p>FinTrack Campus is a smart financial assistant specifically designed for college students, seamlessly combining financial management with financial education:</p>
+                    
+                    <h4 style="color:#2C3E50;margin:20px 0 15px;">Core Value Propositions:</h4>
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-magic"></i></div>
+                            <div class="feature-content">
+                                <h4>Painless Budgeting</h4>
+                                <p>Through bank card connection and intelligent categorization, reduces 90% of manual input</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-gamepad"></i></div>
+                            <div class="feature-content">
+                                <h4>Gamified Learning</h4>
+                                <p>Every expense is a learning opportunity, earning reward points through financial knowledge Q&A</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-users"></i></div>
+                            <div class="feature-content">
+                                <h4>Peer Benchmarking</h4>
+                                <p>Anonymous campus spending data comparison helps students understand reasonable spending levels</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                            <div class="feature-content">
+                                <h4>Investment Introduction</h4>
+                                <p>Simulated investing starting from $10, paired with real-time educational content</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4 style="color:#2C3E50;margin:20px 0 15px;">Unique Differentiation:</h4>
+                    <div class="stakeholder-grid">
+                        <div class="stakeholder-card">
+                            <div class="stakeholder-title">Specialized "Student Mode"</div>
+                            <p>Considers semester-based spending patterns, scholarship income, and other special financial circumstances</p>
+                        </div>
+                        
+                        <div class="stakeholder-card">
+                            <div class="stakeholder-title">Social Features</div>
+                            <p>Split bills with roommates, savings challenges with friends</p>
+                        </div>
+                        
+                        <div class="stakeholder-card">
+                            <div class="stakeholder-title">Graduation Planning</div>
+                            <p>Automatically generates personal credit building plans and post-employment financial planning suggestions</p>
+                        </div>
+                    </div>
+                    
+                    <div class="section-header">
+                        <div class="section-number">3.0</div>
+                        <h3>Target Users</h3>
+                    </div>
+                    
+                    <h4 style="color:#2C3E50;margin:20px 0 15px;">Primary Users: 18-24 year old college students, especially:</h4>
+                    <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
+                        <li>First and second-year students managing finances independently for the first time</li>
+                        <li>Upperclassmen with some income (internships, part-time jobs) but lacking systematic financial planning</li>
+                        <li>STEM and business students interested in investing but lacking basic knowledge</li>
+                    </ul>
+                    
+                    <p><strong>Secondary Users:</strong> Recent graduates transitioning from student financial mode to professional financial management</p>
+                    
+                    <div class="section-header">
+                        <div class="section-number">4.0</div>
+                        <h3>MVP Feature Definition</h3>
+                    </div>
+                    
+                    <h4 style="color:#2C3E50;margin:20px 0 15px;">Core Features:</h4>
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-credit-card"></i></div>
+                            <div class="feature-content">
+                                <h4>Smart Expense Tracking</h4>
+                                <p>Bank card connection + AI categorization, automatically identifying student spending scenarios (dining halls, textbooks, entertainment, etc.)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-heartbeat"></i></div>
+                            <div class="feature-content">
+                                <h4>Financial Health Score</h4>
+                                <p>Comprehensive scoring system based on income, expenses, and savings rate, generating personalized weekly recommendations</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-calendar-alt"></i></div>
+                            <div class="feature-content">
+                                <h4>Budget Assistant</h4>
+                                <p>Semester-based budget planning, considering different spending patterns during start of semester, finals, and holidays</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4 style="color:#2C3E50;margin:20px 0 15px;">Not Included (v2.0 consideration):</h4>
+                    <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
+                        <li><strong>Complex Investment Features:</strong> First focus on basic financial management habit formation</li>
+                        <li><strong>Loan Management:</strong> Student loans involve complex legal and policy issues requiring additional compliance investment</li>
+                        <li><strong>Multi-currency Support:</strong> Focus on US market first, international student features for later development</li>
+                    </ul>
+                    
+                    <div class="section-header">
+                        <div class="section-number">5.0</div>
+                        <h3>Product Roadmap</h3>
+                    </div>
+                    
+                    <div class="roadmap-container">
+                        <div class="roadmap-item">
+                            <div class="roadmap-date">V1.0</div>
+                            <div class="roadmap-content">
+                                <div class="roadmap-title">MVP (3 months)</div>
+                                <p>Basic expense tracking + budget features + financial education content</p>
+                                <p><strong>Goal:</strong> Validate core value hypothesis, achieve 1,000 active users</p>
+                            </div>
+                        </div>
+                        
+                        <div class="roadmap-item">
+                            <div class="roadmap-date">V1.5</div>
+                            <div class="roadmap-content">
+                                <div class="roadmap-title">First Iteration (+2 months)</div>
+                                <p>Social features + gamification elements + campus spending benchmarks</p>
+                                <p><strong>Goal:</strong> Increase user retention to 60% (monthly retention), build user community</p>
+                            </div>
+                        </div>
+                        
+                        <div class="roadmap-item">
+                            <div class="roadmap-date">V2.0</div>
+                            <div class="roadmap-content">
+                                <div class="roadmap-title">Major Feature Upgrade (+4 months)</div>
+                                <p>Simulated investment features + credit building guidance + graduation financial planning</p>
+                                <p><strong>Goal:</strong> Become the preferred financial management tool for college students, reach 10,000 MAU</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="section-header">
+                        <div class="section-number">6.0</div>
+                        <h3>My Decision-Making Process</h3>
+                    </div>
+                    
+                    <h4 style="color:#2C3E50;margin:20px 0 15px;">Priority Trade-offs:</h4>
+                    <p>In the MVP stage, I chose "expense tracking" over "investment features" as the core, based on the following considerations:</p>
+                    <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
+                        <li><strong>User Value Gradient:</strong> Good spending habits are the foundation of investing, solving more fundamental problems</li>
+                        <li><strong>Technical Risk Control:</strong> Expense categorization technology is relatively mature, while investment features involve financial regulatory compliance</li>
+                        <li><strong>Market Validation Cost:</strong> Lower cost to validate users' willingness to pay for budgeting features</li>
+                    </ul>
+                    
+                    <h4 style="color:#2C3E50;margin:20px 0 15px;">Cautious Introduction of Social Features:</h4>
+                    <p>Although user research showed interest in "comparing expenses with friends," I decided to introduce social features only in V1.5 because:</p>
+                    <ul style="list-style-type:disc;margin-left:20px;margin-bottom:20px;">
+                        <li><strong>Privacy Sensitivity:</strong> Socializing financial data requires more careful privacy protection design</li>
+                        <li><strong>Product Complexity:</strong> First let users develop personal usage habits, then add social value layers</li>
+                    </ul>
+                    
+                    <h4 style="color:#2C3E50;margin:20px 0 15px;">Business Model Assumptions:</h4>
+                    <p>Adopt Freemium model: free version provides basic budgeting features, paid version ($4.99/month) provides advanced analytics, investment simulation, and personalized financial advice. This pricing choice is based on college student group payment ability analysis and competitor price research.</p>
+                    
+                    <div class="conclusion-highlight">
+                        <h3>Cross-Domain Integration Capabilities</h3>
+                        <p>This project demonstrates my ability to integrate financial expertise, technical implementation capabilities, and user research methods, as well as my comprehensive thinking about products from concept to execution.</p>
+                    </div>
+                `
+            }
+        };
+
         // Modal functionality
         document.addEventListener('DOMContentLoaded', function() {
-            const modal = document.getElementById('project-modal');
-            const modalBody = document.getElementById('modal-body');
-            const closeModal = document.querySelector('.close-modal');
+            const projectModal = document.getElementById('project-modal');
+            const projectModalBody = document.getElementById('modal-body');
+            const thinkingModal = document.getElementById('thinking-modal');
+            const thinkingModalBody = document.getElementById('thinking-modal-body');
+            const closeModals = document.querySelectorAll('.close-modal');
             const viewProjectButtons = document.querySelectorAll('.view-project');
+            const viewThinkingButtons = document.querySelectorAll('.view-thinking');
             
-            // Open modal
+            // Open project modal
             viewProjectButtons.forEach(button => {
                 button.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -1868,12 +2393,12 @@
                     const project = projects[projectId];
                     
                     if (project) {
-                        modalBody.innerHTML = `
+                        projectModalBody.innerHTML = `
                             <h2 style="color: #2C3E50; margin-bottom: 10px;">${project.title}</h2>
                             <p style="color: #7F8C8D; margin-bottom: 30px;">${project.subtitle}</p>
                             ${project.content}
                         `;
-                        modal.style.display = 'block';
+                        projectModal.style.display = 'block';
                         document.body.style.overflow = 'hidden';
                         
                         // Initialize charts based on project
@@ -1886,16 +2411,42 @@
                 });
             });
             
-            // Close modal
-            closeModal.addEventListener('click', function() {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto';
+            // Open thinking modal
+            viewThinkingButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const thinkingId = this.getAttribute('data-thinking');
+                    const thinking = thinkingContent[thinkingId];
+                    
+                    if (thinking) {
+                        thinkingModalBody.innerHTML = `
+                            <h2 style="color: #2C3E50; margin-bottom: 10px;">${thinking.title}</h2>
+                            <p style="color: #7F8C8D; margin-bottom: 30px;">${thinking.subtitle}</p>
+                            ${thinking.content}
+                        `;
+                        thinkingModal.style.display = 'block';
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            });
+            
+            // Close modals
+            closeModals.forEach(closeModal => {
+                closeModal.addEventListener('click', function() {
+                    projectModal.style.display = 'none';
+                    thinkingModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                });
             });
             
             // Close modal when clicking outside
             window.addEventListener('click', function(e) {
-                if (e.target === modal) {
-                    modal.style.display = 'none';
+                if (e.target === projectModal) {
+                    projectModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+                if (e.target === thinkingModal) {
+                    thinkingModal.style.display = 'none';
                     document.body.style.overflow = 'auto';
                 }
             });
