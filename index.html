@@ -9,13 +9,13 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root {
-            --primary: #000000;
-            --primary-light: #121212;
-            --secondary: #9ca3af;
-            --accent: #F59E0B;
-            --accent2: #A78BFA;
-            --light: #1a1a1a;
-            --dark: #ffffff;
+            --primary: #0F172A;
+            --primary-light: #1E293B;
+            --secondary: #64748B;
+            --accent: #7C3AED;
+            --accent2: #0EA5E9;
+            --light: #F1F5F9;
+            --dark: #0F172A;
             --success: #27AE60;
             --transition: all 0.3s ease;
         }
@@ -30,7 +30,7 @@
             font-family: 'DM Mono', monospace;
             color: var(--dark);
             line-height: 1.6;
-            background-color: #000000;
+            background-color: #FFFFFF;
         }
         
         .container {
@@ -41,9 +41,9 @@
         
         /* Header & Navigation */
         header {
-            background: #121212;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-            border-bottom: 1px solid #333;
+            background: #F8F9FA;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-bottom: 1px solid #E2E8F0;
             position: fixed;
             width: 100%;
             top: 0;
@@ -60,7 +60,7 @@
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
-            color: #ffffff;
+            color: #0F172A;
         }
         
         .logo span {
@@ -118,7 +118,7 @@
             border-radius: 50%;
             overflow: hidden;
             border: 4px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
         }
         
         .hero-image img {
@@ -194,7 +194,7 @@
         
         .section-title h2 {
             font-size: 2.5rem;
-            color: #ffffff;
+            color: #0F172A;
             margin-bottom: 15px;
         }
         
@@ -211,7 +211,7 @@
         
         .projects {
             padding: 100px 0;
-            background: #000000;
+            background: #FFFFFF;
         }
 
         .project-grid {
@@ -221,12 +221,12 @@
         }
 
         .project-card {
-            background: #121212;
+            background: #F8F9FA;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
             transition: var(--transition);
-            border: 1px solid #333;
+            border: 1px solid #E2E8F0;
         }
 
         .project-card:hover {
@@ -239,7 +239,7 @@
             height: 220px;
             overflow: hidden;
             position: relative;
-            background: linear-gradient(120deg, #1a1a1a, #2a2a2a);
+            background: linear-gradient(120deg, #E2E8F0, #EEF2FF);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -270,7 +270,7 @@
         .project-content h3 {
             font-size: 1.5rem;
             margin-bottom: 15px;
-            color: #ffffff;
+            color: #0F172A;
         }
 
         .project-content p {
@@ -285,20 +285,20 @@
         }
 
         .skill-tag {
-            background: #2a2a2a;
-            color: #d1d5db;
+            background: #E2E8F0;
+            color: #374151;
             padding: 5px 12px;
             border-radius: 15px;
             font-size: 0.8rem;
             margin-right: 8px;
             margin-bottom: 8px;
-            border: 1px solid #444;
+            border: 1px solid #E2E8F0;
         }
         
         /* About Section */
         .about {
             padding: 100px 0;
-            background: #0a0a0a;
+            background: #F8F9FA;
         }
 
         .about-content {
@@ -310,7 +310,7 @@
         
         .about-text h2 {
             font-size: 2.2rem;
-            color: #ffffff;
+            color: #0F172A;
             margin-bottom: 20px;
         }
         
@@ -320,15 +320,15 @@
         }
         
         .skills-snapshot {
-            background: #121212;
+            background: #F8F9FA;
             padding: 30px;
             border-radius: 15px;
             margin-bottom: 40px;
-            border: 1px solid #333;
+            border: 1px solid #E2E8F0;
         }
 
         .skills-snapshot h3 {
-            color: #ffffff;
+            color: #0F172A;
             margin-bottom: 20px;
             font-size: 1.4rem;
             text-align: center;
@@ -345,11 +345,11 @@
             align-items: center;
             gap: 12px;
             padding: 15px;
-            background: #1e1e1e;
+            background: #FFFFFF;
             border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
             transition: var(--transition);
-            border: 1px solid #333;
+            border: 1px solid #E2E8F0;
         }
 
         .skill-item:hover {
@@ -367,7 +367,7 @@
 
         .skill-item span {
             font-weight: 600;
-            color: #ffffff;
+            color: #0F172A;
             font-size: 1rem;
         }
         
@@ -378,7 +378,7 @@
         }
         
         .skill-category h3 {
-            color: #ffffff;
+            color: #0F172A;
             margin-bottom: 15px;
             font-size: 1.2rem;
         }
@@ -403,7 +403,7 @@
         /* Contact Section */
         .contact {
             padding: 100px 0;
-            background: #000000;
+            background: #FFFFFF;
         }
         
         .contact-content {
@@ -431,12 +431,12 @@
         }
         
         .value-prop {
-            background: #121212;
+            background: #F8F9FA;
             padding: 25px;
             border-radius: 12px;
             text-align: center;
             transition: var(--transition);
-            border: 1px solid #333;
+            border: 1px solid #E2E8F0;
         }
 
         .value-prop:hover {
@@ -452,7 +452,7 @@
         }
 
         .value-prop h4 {
-            color: #ffffff;
+            color: #0F172A;
             margin-bottom: 10px;
             font-size: 1.1rem;
         }
@@ -466,21 +466,21 @@
         
         .btn-outline {
             background: transparent;
-            border: 2px solid var(--accent2);
-            color: var(--accent2);
+            border: 2px solid var(--accent);
+            color: var(--accent);
         }
 
         .btn-outline:hover {
-            background: var(--accent2);
-            border-color: var(--accent2);
-            color: #000000;
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #FFFFFF;
             box-shadow: 0 10px 20px rgba(167, 139, 250, 0.3);
         }
         
         /* Advantages Section */
         .advantages {
             padding: 100px 0;
-            background: #0a0a0a;
+            background: #F8F9FA;
         }
         
         .advantages-grid {
@@ -490,13 +490,13 @@
         }
         
         .advantage-card {
-            background: #121212;
+            background: #F8F9FA;
             padding: 40px 30px;
             border-radius: 15px;
             text-align: center;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
             transition: var(--transition);
-            border: 1px solid #333;
+            border: 1px solid #E2E8F0;
         }
 
         .advantage-card:hover {
@@ -513,7 +513,7 @@
 
         .advantage-card h3 {
             font-size: 1.4rem;
-            color: #ffffff;
+            color: #0F172A;
             margin-bottom: 15px;
         }
         
@@ -525,7 +525,7 @@
         /* Product Thinking Section */
         .product-thinking {
             padding: 100px 0;
-            background: #000000;
+            background: #FFFFFF;
         }
         
         .thinking-grid {
@@ -535,12 +535,12 @@
         }
         
         .thinking-card {
-            background: #121212;
+            background: #F8F9FA;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
             transition: var(--transition);
-            border: 1px solid #333;
+            border: 1px solid #E2E8F0;
         }
 
         .thinking-card:hover {
@@ -555,7 +555,7 @@
 
         .thinking-preview h3 {
             font-size: 1.5rem;
-            color: #ffffff;
+            color: #0F172A;
             margin-bottom: 15px;
         }
         
@@ -573,13 +573,13 @@
         }
         
         .tag {
-            background: #2a2a2a;
-            color: #d1d5db;
+            background: #E2E8F0;
+            color: #374151;
             padding: 5px 12px;
             border-radius: 20px;
             font-size: 0.8rem;
             font-weight: 500;
-            border: 1px solid #444;
+            border: 1px solid #E2E8F0;
         }
         
         .thinking-card .btn {
@@ -589,11 +589,11 @@
         
         /* Footer */
         footer {
-            background: #121212;
-            color: #9ca3af;
+            background: #F8F9FA;
+            color: #64748B;
             padding: 40px 0;
             text-align: center;
-            border-top: 1px solid #333;
+            border-top: 1px solid #E2E8F0;
         }
         
         /* Modal */
@@ -604,13 +604,13 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: #000000;
+            background: #FFFFFF;
             z-index: 2000;
             overflow-y: auto;
         }
 
         .modal-content {
-            background: #0a0a0a;
+            background: #F8F9FA;
             width: 100%;
             min-height: 100%;
             border-radius: 0;
@@ -664,13 +664,13 @@
         }
         
         .viz-card {
-            background: #1a1a1a;
+            background: #FFFFFF;
             border-radius: 10px;
             padding: 25px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
             transition: var(--transition);
-            border: 1px solid #333;
+            border: 1px solid #E2E8F0;
         }
 
         .viz-card:hover {
@@ -696,7 +696,7 @@
             align-items: center;
             margin: 30px 0 20px;
             padding-bottom: 10px;
-            border-bottom: 2px solid #333;
+            border-bottom: 2px solid #E2E8F0;
         }
 
         .section-number {
@@ -708,7 +708,7 @@
 
         .section-header h3 {
             font-size: 1.5rem;
-            color: #ffffff;
+            color: #0F172A;
             margin: 0;
         }
         
@@ -758,10 +758,10 @@
         }
         
         .roadmap-content {
-            background: #1e1e1e;
+            background: #FFFFFF;
             border-radius: 10px;
             padding: 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
             flex: 1;
             border-left: 4px solid var(--accent);
         }
@@ -769,7 +769,7 @@
         .roadmap-title {
             font-weight: 600;
             margin-bottom: 10px;
-            color: #ffffff;
+            color: #0F172A;
         }
 
         .stakeholder-grid {
@@ -780,17 +780,17 @@
         }
 
         .stakeholder-card {
-            background: #1e1e1e;
+            background: #FFFFFF;
             border-radius: 10px;
             padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
             border-top: 4px solid var(--accent);
         }
 
         .stakeholder-title {
             font-weight: 600;
             margin-bottom: 10px;
-            color: #ffffff;
+            color: #0F172A;
         }
         
         .feature-grid {
@@ -801,12 +801,12 @@
         }
         
         .feature-card {
-            background: #1a1a1a;
+            background: #FFFFFF;
             border-radius: 10px;
             padding: 20px;
             display: flex;
             align-items: flex-start;
-            border: 1px solid #333;
+            border: 1px solid #E2E8F0;
         }
 
         .feature-icon {
@@ -817,7 +817,7 @@
 
         .feature-content h4 {
             margin-bottom: 10px;
-            color: #ffffff;
+            color: #0F172A;
         }
 
         .metric-grid {
@@ -828,12 +828,12 @@
         }
 
         .metric-card {
-            background: #1a1a1a;
+            background: #FFFFFF;
             border-radius: 10px;
             padding: 20px;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            border: 1px solid #333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+            border: 1px solid #E2E8F0;
         }
         
         .metric-value {
@@ -876,10 +876,10 @@
         }
         
         .placeholder-content {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            background: linear-gradient(135deg, #F1F5F9 0%, #EEF2FF 100%);
             padding: 60px 40px;
             border-radius: 15px;
-            border: 2px dashed #444;
+            border: 2px dashed #CBD5E1;
             margin: 20px 0;
         }
         
@@ -895,7 +895,7 @@
         }
         
         .placeholder-visual h4 {
-            color: #ffffff;
+            color: #0F172A;
             font-size: 1.5rem;
             margin-bottom: 10px;
         }
@@ -1318,7 +1318,7 @@
                 title: "EchoMom: AI-Powered Postpartum Depression Screening",
                 subtitle: "Product Strategy Lead | Penn HealthHacks+ 2025 Hackathon",
                 content: `
-                    <div style="background:linear-gradient(120deg, #2C3E50, #34495E);color:white;padding:40px;border-radius:10px;margin-bottom:30px;">
+                    <div style="background:linear-gradient(120deg, #2C3E50, #34495E);color:#0F172A;padding:40px;border-radius:10px;margin-bottom:30px;">
                         <h2 style="margin-bottom:15px;">Work Sample: EchoMom – AI-Powered Postpartum Depression Screening</h2>
                         <p>An AI voice analysis tool designed to integrate with clinical workflows to screen for postpartum depression (PPD) during routine postnatal check-ups.</p>
                     </div>
@@ -1550,7 +1550,7 @@
                 title: "DevMind: AI-Powered Developer Tool Enhancement",
                 subtitle: "Product Strategy & Analytics Lead | Penn AI Hackathon 2025 Finalist",
                 content: `
-                    <div style="background:linear-gradient(120deg, #2C3E50, #34495E);color:white;padding:40px;border-radius:10px;margin-bottom:30px;">
+                    <div style="background:linear-gradient(120deg, #2C3E50, #34495E);color:#0F172A;padding:40px;border-radius:10px;margin-bottom:30px;">
                         <h2 style="margin-bottom:15px;">DevMind: AI-Powered Developer Tool Enhancement</h2>
                         <p>An AI-powered developer tool that integrates directly into IDEs to automatically maintain code quality standards in real-time.</p>
                     </div>
@@ -1782,16 +1782,16 @@
                 title: "AI-Driven Vulnerability Management Platform",
                 subtitle: "Product Manager | Full Lifecycle PM · PRD & Roadmap",
                 content: `
-                    <div style="background:linear-gradient(120deg,#1a0010,#120020);border:1px solid #F59E0B;color:white;padding:40px;border-radius:10px;margin-bottom:30px;">
+                    <div style="background:linear-gradient(120deg,#F5F3FF,#EDE9FE);border:1px solid #F59E0B;color:#0F172A;padding:40px;border-radius:10px;margin-bottom:30px;">
                         <h2 style="margin-bottom:15px;color:#F59E0B;">AI-Driven Vulnerability Management Platform</h2>
-                        <p style="color:#d1d5db;">AI-powered security operations platform helping enterprise security teams discover, prioritize, and track vulnerabilities through a complete remediation cycle.</p>
+                        <p style="color:#374151;">AI-powered security operations platform helping enterprise security teams discover, prioritize, and track vulnerabilities through a complete remediation cycle.</p>
                     </div>
 
                     <div class="section-header">
                         <div class="section-number">1.0</div>
                         <h3>Overview</h3>
                     </div>
-                    <p style="color:#d1d5db;">AI-powered security operations platform helping enterprise security teams discover, prioritize, and track vulnerabilities through a complete remediation cycle. Involved in full product lifecycle from research to roadmap planning.</p>
+                    <p style="color:#374151;">AI-powered security operations platform helping enterprise security teams discover, prioritize, and track vulnerabilities through a complete remediation cycle. Involved in full product lifecycle from research to roadmap planning.</p>
 
                     <div class="viz-container">
                         <div class="viz-card">
@@ -1816,23 +1816,23 @@
                         <div class="section-number">2.0</div>
                         <h3>Compete & Gap Analysis</h3>
                     </div>
-                    <p style="color:#d1d5db;">Analyzed 3 competitors across 4 dimensions: feature coverage, usability, delivery ecosystem, and user perspective.</p>
+                    <p style="color:#374151;">Analyzed 3 competitors across 4 dimensions: feature coverage, usability, delivery ecosystem, and user perspective.</p>
 
                     <div class="stakeholder-grid">
                         <div class="stakeholder-card">
                             <div class="stakeholder-title">Flexibility Gap</div>
-                            <p style="color:#9ca3af;">Orchestration rigidity — existing tools locked teams into fixed workflows with no modular customization for different security team structures.</p>
+                            <p style="color:#64748B;">Orchestration rigidity — existing tools locked teams into fixed workflows with no modular customization for different security team structures.</p>
                         </div>
                         <div class="stakeholder-card">
                             <div class="stakeholder-title">Collaboration Gap</div>
-                            <p style="color:#9ca3af;">Shallow touchpoints — handoffs between security, engineering, and ops lacked structured tracking, causing remediation delays.</p>
+                            <p style="color:#64748B;">Shallow touchpoints — handoffs between security, engineering, and ops lacked structured tracking, causing remediation delays.</p>
                         </div>
                         <div class="stakeholder-card">
                             <div class="stakeholder-title">Visibility Gap</div>
-                            <p style="color:#9ca3af;">Lack of outcome transparency — teams could not measure remediation progress or business impact over time.</p>
+                            <p style="color:#64748B;">Lack of outcome transparency — teams could not measure remediation progress or business impact over time.</p>
                         </div>
                     </div>
-                    <p style="color:#d1d5db;margin-top:15px;">Delivered an 8-page competitive analysis report that directly shaped feature planning direction.</p>
+                    <p style="color:#374151;margin-top:15px;">Delivered an 8-page competitive analysis report that directly shaped feature planning direction.</p>
 
                     <div class="section-header">
                         <div class="section-number">3.0</div>
@@ -1843,23 +1843,23 @@
                             <div class="feature-icon"><i class="fas fa-file-alt"></i></div>
                             <div class="feature-content">
                                 <h4>2 PRDs Written</h4>
-                                <p style="color:#9ca3af;">Covered data flow, AI agent capability boundaries, and interaction workflows. Defined AI agent scope, data retrieval path, and integration approach with existing security tools.</p>
+                                <p style="color:#64748B;">Covered data flow, AI agent capability boundaries, and interaction workflows. Defined AI agent scope, data retrieval path, and integration approach with existing security tools.</p>
                             </div>
                         </div>
                         <div class="feature-card">
                             <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
                             <div class="feature-content">
                                 <h4>Pre-Launch Validation</h4>
-                                <p style="color:#9ca3af;">Validated model retrieval rates and output accuracy before launch. Defined acceptance criteria for AI agent performance thresholds.</p>
+                                <p style="color:#64748B;">Validated model retrieval rates and output accuracy before launch. Defined acceptance criteria for AI agent performance thresholds.</p>
                             </div>
                         </div>
                     </div>
 
                     <div style="margin:25px 0;">
-                        <p style="color:#9ca3af;margin-bottom:12px;font-style:italic;">Interactive Figma prototype:</p>
+                        <p style="color:#64748B;margin-bottom:12px;font-style:italic;">Interactive Figma prototype:</p>
                         <iframe
                             src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/7qsjRXu63kfkIY7mbuUlr2/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9EAI-Agent?node-id=9101-5073&p=f&t=6Cja6md9o6w7Kg8J-0"
-                            style="width:100%;height:600px;border:1px solid #333;border-radius:8px;"
+                            style="width:100%;height:600px;border:1px solid #E2E8F0;border-radius:8px;"
                             allowfullscreen>
                         </iframe>
                     </div>
@@ -1868,37 +1868,37 @@
                         <div class="section-number">4.0</div>
                         <h3>Phase & Prioritize — 12-Week Roadmap</h3>
                     </div>
-                    <p style="color:#d1d5db;margin-bottom:20px;"><em>Principle: fix pain points first → clear main flow → automate → then intelligent</em></p>
+                    <p style="color:#374151;margin-bottom:20px;"><em>Principle: fix pain points first → clear main flow → automate → then intelligent</em></p>
 
                     <div class="roadmap-container">
                         <div class="roadmap-item">
                             <div class="roadmap-date" style="background:#F59E0B;">V1.1</div>
                             <div class="roadmap-content">
                                 <div class="roadmap-title">Wk 1–4 · Stability (All P0)</div>
-                                <p style="color:#9ca3af;">Fix core flow issues: report generation bugs, data source selection reliability. Establish a stable, trustworthy foundation before adding features.</p>
+                                <p style="color:#64748B;">Fix core flow issues: report generation bugs, data source selection reliability. Establish a stable, trustworthy foundation before adding features.</p>
                             </div>
                         </div>
                         <div class="roadmap-item">
                             <div class="roadmap-date" style="background:#cc0040;">V1.2</div>
                             <div class="roadmap-content">
                                 <div class="roadmap-title">Wk 5–8 · Automation</div>
-                                <p style="color:#9ca3af;">Scanner API integration, scheduled report generation, data import/export optimization. Reduce manual toil for security teams.</p>
+                                <p style="color:#64748B;">Scanner API integration, scheduled report generation, data import/export optimization. Reduce manual toil for security teams.</p>
                             </div>
                         </div>
                         <div class="roadmap-item">
                             <div class="roadmap-date" style="background:#A78BFA;color:#000;">V1.3</div>
                             <div class="roadmap-content">
                                 <div class="roadmap-title">Wk 9–12 · AI Intelligence</div>
-                                <p style="color:#9ca3af;">Trend prediction, smart priority ranking, historical version comparison. Layer AI on top of a stable, automated foundation.</p>
+                                <p style="color:#64748B;">Trend prediction, smart priority ranking, historical version comparison. Layer AI on top of a stable, automated foundation.</p>
                             </div>
                         </div>
                     </div>
 
                     <div style="margin:25px 0;">
-                        <p style="color:#9ca3af;margin-bottom:12px;font-style:italic;">Roadmap design:</p>
+                        <p style="color:#64748B;margin-bottom:12px;font-style:italic;">Roadmap design:</p>
                         <iframe
                             src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/JmIQGzACfNxy7Uj18h2hus/Roadmap-Design-Pro--Community-?node-id=1-112&t=6Cja6md9o6w7Kg8J-1"
-                            style="width:100%;height:500px;border:1px solid #333;border-radius:8px;"
+                            style="width:100%;height:500px;border:1px solid #E2E8F0;border-radius:8px;"
                             allowfullscreen>
                         </iframe>
                     </div>
@@ -1907,13 +1907,13 @@
                         <div class="section-number">5.0</div>
                         <h3>Agent Design Highlight</h3>
                     </div>
-                    <div style="background:#1a0a00;border-left:4px solid #F59E0B;padding:20px;border-radius:8px;margin-bottom:20px;">
+                    <div style="background:#FFF7ED;border-left:4px solid #F59E0B;padding:20px;border-radius:8px;margin-bottom:20px;">
                         <p style="color:#F59E0B;font-weight:600;margin-bottom:8px;">Pain Point</p>
-                        <p style="color:#d1d5db;">Security teams face 10,000+ vulnerabilities. Manual verification takes <strong style="color:white;">10–30 minutes each</strong> — making full coverage humanly impossible.</p>
+                        <p style="color:#374151;">Security teams face 10,000+ vulnerabilities. Manual verification takes <strong style="color:white;">10–30 minutes each</strong> — making full coverage humanly impossible.</p>
                     </div>
-                    <div style="background:#001a0a;border-left:4px solid #A78BFA;padding:20px;border-radius:8px;margin-bottom:20px;">
+                    <div style="background:#F0FDF4;border-left:4px solid #A78BFA;padding:20px;border-radius:8px;margin-bottom:20px;">
                         <p style="color:#A78BFA;font-weight:600;margin-bottom:8px;">AI Agent Solution</p>
-                        <p style="color:#d1d5db;">Verifies <strong style="color:white;">1,234 vulnerabilities in parallel</strong> using multi-dimensional analysis: asset environment, service configuration, historical records, and threat intelligence.</p>
+                        <p style="color:#374151;">Verifies <strong style="color:white;">1,234 vulnerabilities in parallel</strong> using multi-dimensional analysis: asset environment, service configuration, historical records, and threat intelligence.</p>
                     </div>
 
                     <div class="metric-grid">
@@ -1935,13 +1935,13 @@
                         </div>
                     </div>
 
-                    <div style="background:#121212;border:1px solid #333;border-radius:10px;padding:20px;margin-top:20px;">
+                    <div style="background:#F8F9FA;border:1px solid #E2E8F0;border-radius:10px;padding:20px;margin-top:20px;">
                         <p style="color:#A78BFA;font-weight:600;margin-bottom:12px;">Human-in-the-Loop Design</p>
-                        <p style="color:#d1d5db;margin-bottom:12px;">Before the system updates vulnerability status, users choose from three actions:</p>
+                        <p style="color:#374151;margin-bottom:12px;">Before the system updates vulnerability status, users choose from three actions:</p>
                         <div style="display:flex;gap:12px;flex-wrap:wrap;">
                             <span style="background:#F59E0B;color:white;padding:8px 16px;border-radius:20px;font-size:0.85rem;font-weight:600;">Apply All</span>
-                            <span style="background:#333;color:#d1d5db;padding:8px 16px;border-radius:20px;font-size:0.85rem;">Selective Apply</span>
-                            <span style="background:#333;color:#d1d5db;padding:8px 16px;border-radius:20px;font-size:0.85rem;">Batch Review</span>
+                            <span style="background:#E2E8F0;color:#374151;padding:8px 16px;border-radius:20px;font-size:0.85rem;">Selective Apply</span>
+                            <span style="background:#E2E8F0;color:#374151;padding:8px 16px;border-radius:20px;font-size:0.85rem;">Batch Review</span>
                         </div>
                     </div>
 
@@ -1951,8 +1951,8 @@
                     </div>
                     <div class="conclusion-highlight">
                         <h3 style="color:white;">Full Lifecycle Delivered</h3>
-                        <p style="color:#d1d5db;">End-to-end product ownership from discovery to delivery:</p>
-                        <ul style="margin-left:20px;margin-top:15px;color:#d1d5db;">
+                        <p style="color:#374151;">End-to-end product ownership from discovery to delivery:</p>
+                        <ul style="margin-left:20px;margin-top:15px;color:#374151;">
                             <li>Competitive analysis across 3 platforms → identified 3 structural gaps → 8-page report</li>
                             <li>2 PRDs covering AI agent boundaries, data flow, and integration design</li>
                             <li>12-week phased roadmap: stability → automation → AI intelligence</li>
@@ -1980,8 +1980,8 @@
 
                     if (project) {
                         projectModalBody.innerHTML = `
-                            <h2 style="color:#ffffff;margin-bottom:10px;">${project.title}</h2>
-                            <p style="color:#9ca3af;margin-bottom:30px;">${project.subtitle}</p>
+                            <h2 style="color:#0F172A;margin-bottom:10px;">${project.title}</h2>
+                            <p style="color:#64748B;margin-bottom:30px;">${project.subtitle}</p>
                             ${project.content}
                         `;
                         projectModal.style.display = 'block';
