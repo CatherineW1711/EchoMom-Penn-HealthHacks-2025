@@ -1113,7 +1113,7 @@
                 </div>
 
                 <!-- AI Vulnerability Platform Project -->
-                <div class="project-card">
+                <div class="project-card" id="card-aivuln">
                     <div class="project-img">
                         <div class="project-tag">AI Product · Full Lifecycle PM</div>
                         <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="AI Vulnerability Platform">
@@ -1132,7 +1132,7 @@
                 </div>
 
                 <!-- EchoMom Health Tech Project -->
-                <div class="project-card">
+                <div class="project-card" id="card-echomom">
                     <div class="project-img">
                         <div class="project-tag">Health Tech</div>
                         <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="EchoMom AI Screening Project">
@@ -1150,7 +1150,7 @@
                 </div>
                 
                 <!-- DevMind AI Hackathon Project -->
-                <div class="project-card">
+                <div class="project-card" id="card-devmind">
                     <div class="project-img">
                         <div class="project-tag">AI Hackathon Finalist</div>
                         <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80" alt="DevMind AI Tool Project">
@@ -2060,14 +2060,18 @@
             const hashId = window.location.hash.replace('#', '');
             if (hashId && projects[hashId]) {
                 openProject(hashId);
-            } else if (hashId === 'tiktok') {
-                const card = document.getElementById('card-tiktok');
-                if (card) {
-                    setTimeout(() => {
-                        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        card.classList.add('card-highlighted');
-                        card.addEventListener('animationend', () => card.classList.remove('card-highlighted'), { once: true });
-                    }, 200);
+            } else {
+                const cardMap = { tiktok: 'card-tiktok', 'card-echomom': 'card-echomom', 'card-devmind': 'card-devmind', 'card-aivuln': 'card-aivuln' };
+                const cardId = cardMap[hashId];
+                if (cardId) {
+                    const card = document.getElementById(cardId);
+                    if (card) {
+                        setTimeout(() => {
+                            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            card.classList.add('card-highlighted');
+                            card.addEventListener('animationend', () => card.classList.remove('card-highlighted'), { once: true });
+                        }, 200);
+                    }
                 }
             }
             
