@@ -235,6 +235,16 @@
             border-color: var(--accent);
         }
 
+        @keyframes cardHighlight {
+            0%   { box-shadow: 0 0 0 0 rgba(124,58,237,0.0), 0 10px 30px rgba(0,0,0,0.06); border-color: #E2E8F0; }
+            30%  { box-shadow: 0 0 0 8px rgba(124,58,237,0.25), 0 15px 40px rgba(124,58,237,0.2); border-color: var(--accent); }
+            70%  { box-shadow: 0 0 0 8px rgba(124,58,237,0.15), 0 15px 40px rgba(124,58,237,0.15); border-color: var(--accent); }
+            100% { box-shadow: 0 0 0 0 rgba(124,58,237,0.0), 0 10px 30px rgba(0,0,0,0.06); border-color: #E2E8F0; }
+        }
+        .project-card.card-highlighted {
+            animation: cardHighlight 1.8s ease forwards;
+        }
+
         .project-img {
             height: 220px;
             overflow: hidden;
@@ -1072,7 +1082,7 @@
             
             <div class="project-grid">
                 <!-- TikTok Creative Hub Project -->
-                <div class="project-card">
+                <div class="project-card" id="card-tiktok">
                     <div class="project-img" style="background:#000000;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;">
                         <div class="project-tag">UPenn HCI Project</div>
                         <!-- ambient glows -->
@@ -2046,10 +2056,19 @@
                 }
             });
 
-            // On page load: auto-open project if URL has a matching hash
+            // On page load: auto-open project modal OR scroll to a card
             const hashId = window.location.hash.replace('#', '');
             if (hashId && projects[hashId]) {
                 openProject(hashId);
+            } else if (hashId === 'tiktok') {
+                const card = document.getElementById('card-tiktok');
+                if (card) {
+                    setTimeout(() => {
+                        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        card.classList.add('card-highlighted');
+                        card.addEventListener('animationend', () => card.classList.remove('card-highlighted'), { once: true });
+                    }, 200);
+                }
             }
             
             // Initialize EchoMom charts
