@@ -1992,46 +1992,65 @@
             const closeModals = document.querySelectorAll('.close-modal');
             const viewProjectButtons = document.querySelectorAll('.view-project');
 
-            // Open project modal
+            // Core function: open a project modal by ID
+            function openProject(projectId) {
+                const project = projects[projectId];
+                if (!project) return;
+
+                projectModalBody.innerHTML = `
+                    <h2 style="color:#0F172A;margin-bottom:10px;">${project.title}</h2>
+                    <p style="color:#64748B;margin-bottom:30px;">${project.subtitle}</p>
+                    ${project.content}
+                `;
+                projectModal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+                // Update URL hash for shareable deep link
+                history.replaceState(null, '', '#' + projectId);
+
+                setTimeout(() => {
+                    if (projectId === 'echomom') initEchomomCharts();
+                    if (projectId === 'devmind') initDevmindCharts();
+                }, 100);
+            }
+
+            function closeProject() {
+                projectModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                // Remove hash from URL
+                history.replaceState(null, '', window.location.pathname + window.location.search);
+            }
+
+            // Open project modal on button click
             viewProjectButtons.forEach(button => {
                 button.addEventListener('click', function(e) {
                     e.preventDefault();
-                    const projectId = this.getAttribute('data-project');
-                    const project = projects[projectId];
-
-                    if (project) {
-                        projectModalBody.innerHTML = `
-                            <h2 style="color:#0F172A;margin-bottom:10px;">${project.title}</h2>
-                            <p style="color:#64748B;margin-bottom:30px;">${project.subtitle}</p>
-                            ${project.content}
-                        `;
-                        projectModal.style.display = 'block';
-                        document.body.style.overflow = 'hidden';
-
-                        // Initialize charts based on project
-                        setTimeout(() => {
-                            if (projectId === 'echomom') initEchomomCharts();
-                            if (projectId === 'devmind') initDevmindCharts();
-                        }, 100);
-                    }
+                    openProject(this.getAttribute('data-project'));
                 });
             });
 
             // Close modals
             closeModals.forEach(closeModal => {
-                closeModal.addEventListener('click', function() {
-                    projectModal.style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                });
+                closeModal.addEventListener('click', closeProject);
             });
 
             // Close modal when clicking outside
             window.addEventListener('click', function(e) {
-                if (e.target === projectModal) {
+                if (e.target === projectModal) closeProject();
+            });
+
+            // Close on browser Back button
+            window.addEventListener('popstate', function() {
+                if (projectModal.style.display === 'block') {
                     projectModal.style.display = 'none';
                     document.body.style.overflow = 'auto';
                 }
             });
+
+            // On page load: auto-open project if URL has a matching hash
+            const hashId = window.location.hash.replace('#', '');
+            if (hashId && projects[hashId]) {
+                openProject(hashId);
+            }
             
             // Initialize EchoMom charts
             function initEchomomCharts() {
